@@ -19,9 +19,12 @@
     <link rel="stylesheet" href="essets/Css/style.css">
 </head>
 <body>
-  </h3>
-   Option2
+    Option2
 </h3>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="essets/Css/style.css">
+</head>
   <p>lDevOps L1course Database Administration TASK DB1
 1. Download MySQL server for your OS on VM.
 2. Install MySQL server on VM.
