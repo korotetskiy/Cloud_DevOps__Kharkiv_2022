@@ -7,6 +7,10 @@
 <body>
     <div class="starter-template">
       <h1>EPAM Cloud&DevOps Fundamentals Autumn 2022</h1>
+      <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="essets/Css/style.css">
+</head>
     <img src="https://vkor-www.s3.amazonaws.com/main1.jpg">
     <h1>Vladimir</h1>
       <hr>
