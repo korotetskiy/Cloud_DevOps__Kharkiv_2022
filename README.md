@@ -1,5 +1,9 @@
   <main role="main" class="container">
 <body>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="essets/Css/style.css">
+</head>
     <div class="starter-template">
       <h1>EPAM Cloud&DevOps Fundamentals Autumn 2022</h1>
       <head>
