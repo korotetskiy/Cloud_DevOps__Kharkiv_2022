@@ -20,6 +20,7 @@
 </head>
 <body>
    Option2
+  <body>
 </h3>
   <p>lDevOps L1course Database Administration TASK DB1
 1. Download MySQL server for your OS on VM.
