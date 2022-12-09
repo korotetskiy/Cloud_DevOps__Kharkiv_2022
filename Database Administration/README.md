@@ -2,7 +2,7 @@
 <head>
 
 1. Download MySQL server for your OS on VM. 
-2. Install MySQL server on VM.</br><h3>sudo apt-get install mysql-server</h3></br>
+2. Install MySQL server on VM.</br><h3>sudo apt-get install mysql-server</h3><img src="https://vkor-www.s3.amazonaws.com/main.jpg"></br>
 3. Select a subject area and describe the database schema, (minimum 3 tables)
  
 4. Create a database on the server through the console.
