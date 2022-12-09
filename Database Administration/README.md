@@ -36,8 +36,8 @@ Connect to the databases a new user and verify that the privileges allow or deny
 9. Make a selection from the main table DB MySQL.
  
 
-PART 2
-10. Make backup of your database.
+PART 2</br>
+10. Make backup of your database.</br><img src="https://github.com/korotetskiy/img/blob/main/db9.png"></br><head>
  
 11. Delete the table and/or part of the data in the table.
  
