@@ -3,37 +3,44 @@
 
 1. Download MySQL server for your OS on VM. 
 2. Install MySQL server on VM.</br><h3>sudo apt-get install mysql-server</h3><img src="https://github.com/korotetskiy/img/blob/main/db1.png"></br>
-3. Select a subject area and describe the database schema, (minimum 3 tables)<img src="https://github.com/korotetskiy/img/blob/main/db3.png"></br><head>
-4. Create a database on the server through the console.<img src="https://github.com/korotetskiy/img/blob/main/db2.png"><head>
-5. Fill in tables.<img src="https://github.com/korotetskiy/img/blob/main/db4.png"></br><head>  
-6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.<img src="https://github.com/korotetskiy/img/blob/main/db6.png"></br><head>
+3. Select a subject area and describe the database schema, (minimum 3 tables)</br><img src="https://github.com/korotetskiy/img/blob/main/db3.png"></br><head>
+4. Create a database on the server through the console.</br><img src="https://github.com/korotetskiy/img/blob/main/db2-1.png"><head>
+5. Fill in tables.</br><img src="https://github.com/korotetskiy/img/blob/main/db4.png"></br><head>  
+6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.</br><img src="https://github.com/korotetskiy/img/blob/main/db6.png"></br><head>
 <img src="https://github.com/korotetskiy/img/blob/main/db6-1.png"></br><head>
     
 7. Execute other different SQL queries DDL, DML, DCL.</br><head>
-<h3>Data Definition Language (DDL) -  CREATE,    ALTER,    DROP,   TRUNCATE</br>
+<h4>Data Definition Language (DDL) -  CREATE,    ALTER,    DROP,   TRUNCATE</br>
     CREATE TABLE EMPLOYEE(Name CHAR, Email CHAR, DOB DATE);</br>  
     ALTER TABLE STU_DETAILS ADD(ADDRESS VARCHAR(20));</br>  
     ALTER TABLE STU_DETAILS MODIFY (NAME VARCHAR(20)); </br> 
     DROP TABLE EMPLOYEE;</br>
-    TRUNCATE TABLE EMPLOYEE;</h3>   
+    TRUNCATE TABLE EMPLOYEE;</h4>   
 
-<h3>Data Manipulation Language (DML) - INSERT, UPDATE, DELETE</br>
+<h4>Data Manipulation Language (DML) - INSERT, UPDATE, DELETE</br>
     INSERT INTO javatpoint (Author, Subject) VALUES ("Sonoo", "DBMS"); </br> 
     UPDATE students    </br>
     SET User_Name = 'Sonoo' </br>   
     WHERE Student_Id = '3';</br>
     DELETE FROM javatpoint</br>  
-    WHERE Author="Sonoo";</h3>
+    WHERE Author="Sonoo";</h4>
 
-<h3>Data Control Language (DCL) - Grant, Revoke</br>
+<h4>Data Control Language (DCL) - Grant, Revoke</br>
       GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER; </br>
-      REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;</br> </h3>
+      REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;</br> </h4>
 
-8. Create a database of new users with different privileges.           
-Connect to the databases a new user and verify that the privileges allow or deny certain actions.  
+8. Create a database of new users with different privileges.</br></br><img src="https://github.com/korotetskiy/img/blob/main/db8.png"></br><head>
+  <img src="https://github.com/korotetskiy/img/blob/main/db8-1.png"></br><head>
+  <img src="https://github.com/korotetskiy/img/blob/main/db8-2.png"></br><head>
+  <img src="https://github.com/korotetskiy/img/blob/main/db8-3.png"></br><head>
+  <img src="https://github.com/korotetskiy/img/blob/main/db8-4.png"></br><head>
+  <img src="https://github.com/korotetskiy/img/blob/main/db8-5.png"></br><head>
+  <img src="https://github.com/korotetskiy/img/blob/main/db8-6.png"></br><head>
+Connect to the databases a new user and verify that the privileges allow or deny certain actions.</br><img src="https://github.com/korotetskiy/img/blob/main/db8-7.png"></br><head><img src="https://github.com/korotetskiy/img/blob/main/db8-7-1.png"></br><head><img src="https://github.com/korotetskiy/img/blob/main/db8-8.png"></br><head>   
  
  
-9. Make a selection from the main table DB MySQL.
+9. Make a selection from the main table DB MySQL.</br><head>
+<img src="https://github.com/korotetskiy/img/blob/main/db-9.png"></br><head>
  
 
 PART 2</br>
