@@ -55,7 +55,7 @@ Connect to the databases a new user and verify that the privileges allow or deny
     <img src="https://github.com/korotetskiy/img/blob/main/db13-8.png">
     <img src="https://github.com/korotetskiy/img/blob/main/db13-9.png">      
 14. Connect to your database.<img src="https://github.com/korotetskiy/img/blob/main/db14.png">
-15. Execute SELECT operator similar step 6.<img src="https://github.com/korotetskiy/img/blob/main/db15.png">
+15. Execute SELECT operator similar step 6.<img src="https://github.com/korotetskiy/img/blob/main/db15.png"><img src="https://github.com/korotetskiy/img/blob/main/db15-1.png">
 16. Create the dump of your database.
 
 <h3>PART 3 – MongoDB</h3>
