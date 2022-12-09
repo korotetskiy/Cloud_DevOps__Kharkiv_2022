@@ -1,4 +1,4 @@
-<h2>DevOps L1 course Database Administration TASK DB1</h2>
+<h2>DevOps L1 course Database Administration Home Tasks</h2>
 <head>
 
 1. Download MySQL server for your OS on VM. 
@@ -7,6 +7,7 @@
 4. Create a database on the server through the console.<img src="https://github.com/korotetskiy/img/blob/main/db2.png"><head>
 5. Fill in tables.<img src="https://github.com/korotetskiy/img/blob/main/db4.png"></br><head>  
 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.<img src="https://github.com/korotetskiy/img/blob/main/db6.png"></br><head>
+<img src="https://github.com/korotetskiy/img/blob/main/db6-1.png"></br><head>
     
 7. Execute other different SQL queries DDL, DML, DCL.</br><head>
 <h3>Data Definition Language (DDL) -  CREATE,    ALTER,    DROP,   TRUNCATE</br>
