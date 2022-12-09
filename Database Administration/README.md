@@ -2,28 +2,19 @@
 <head>
 
 1. Download MySQL server for your OS on VM. 
-2. Install MySQL server on VM.</br><h3>sudo apt-get install mysql-server</h3><img src="https://vkor-www.s3.amazonaws.com/main.jpg"></br>
-3. Select a subject area and describe the database schema, (minimum 3 tables)
- 
-4. Create a database on the server through the console.
- 
- 
-5. Fill in tables.
+2. Install MySQL server on VM.</br><h3>sudo apt-get install mysql-server</h3><img src="https://github.com/korotetskiy/img/blob/main/db1.png"></br>
+3. Select a subject area and describe the database schema, (minimum 3 tables)<img src="https://github.com/korotetskiy/img/blob/main/db3.png"></br><head>
+4. Create a database on the server through the console.<img src="https://github.com/korotetskiy/img/blob/main/db2.png"><head>
+5. Fill in tables.<img src="https://github.com/korotetskiy/img/blob/main/db4.png"></br><head>  
+6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.<img src="https://github.com/korotetskiy/img/blob/main/db6.png"></br><head>
     
-
-
-
-6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
- 
- 
- 
-7. Execute other different SQL queries DDL, DML, DCL.
-Data Definition Language (DDL) -  CREATE,    ALTER,    DROP,   TRUNCATE
-    CREATE TABLE EMPLOYEE(Name CHAR, Email CHAR, DOB DATE);  
-    ALTER TABLE STU_DETAILS ADD(ADDRESS VARCHAR(20));  
-    ALTER TABLE STU_DETAILS MODIFY (NAME VARCHAR(20));  
-    DROP TABLE EMPLOYEE;
-    TRUNCATE TABLE EMPLOYEE;   
+7. Execute other different SQL queries DDL, DML, DCL.</br><head>
+<h3>Data Definition Language (DDL) -  CREATE,    ALTER,    DROP,   TRUNCATE</br>
+    CREATE TABLE EMPLOYEE(Name CHAR, Email CHAR, DOB DATE);</br>  
+    ALTER TABLE STU_DETAILS ADD(ADDRESS VARCHAR(20));</br>  
+    ALTER TABLE STU_DETAILS MODIFY (NAME VARCHAR(20)); </br> 
+    DROP TABLE EMPLOYEE;</br>
+    TRUNCATE TABLE EMPLOYEE;</h3>   
 
 Data Manipulation Language (DML) - INSERT, UPDATE, DELETE
     INSERT INTO javatpoint (Author, Subject) VALUES ("Sonoo", "DBMS");  
