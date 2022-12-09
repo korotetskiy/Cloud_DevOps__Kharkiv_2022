@@ -16,17 +16,17 @@
     DROP TABLE EMPLOYEE;</br>
     TRUNCATE TABLE EMPLOYEE;</h3>   
 
-Data Manipulation Language (DML) - INSERT, UPDATE, DELETE
-    INSERT INTO javatpoint (Author, Subject) VALUES ("Sonoo", "DBMS");  
-    UPDATE students    
-    SET User_Name = 'Sonoo'    
-    WHERE Student_Id = '3';
-    DELETE FROM javatpoint  
-    WHERE Author="Sonoo";
+<h3>Data Manipulation Language (DML) - INSERT, UPDATE, DELETE</br>
+    INSERT INTO javatpoint (Author, Subject) VALUES ("Sonoo", "DBMS"); </br> 
+    UPDATE students    </br>
+    SET User_Name = 'Sonoo' </br>   
+    WHERE Student_Id = '3';</br>
+    DELETE FROM javatpoint</br>  
+    WHERE Author="Sonoo";</h3>
 
-Data Control Language (DCL) - Grant, Revoke
-      GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER; 
-      REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2; 
+<h3>Data Control Language (DCL) - Grant, Revoke</br>
+      GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER; </br>
+      REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;</br> </h3>
 
 8. Create a database of new users with different privileges.           
 Connect to the databases a new user and verify that the privileges allow or deny certain actions.  
