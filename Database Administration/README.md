@@ -62,4 +62,4 @@ Connect to the databases a new user and verify that the privileges allow or deny
 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).</br><img src="https://github.com/korotetskiy/img/blob/main/db17-1.png"><img src="https://github.com/korotetskiy/img/blob/main/db17-3.png">
 18. Create a collection. Use db. create Collection to create a collection.</br></br><img src="https://github.com/korotetskiy/img/blob/main/db17-2.jpg"><img src="https://github.com/korotetskiy/img/blob/main/db17-5.png">
 19. Create some documents.<img src="https://github.com/korotetskiy/img/blob/main/db17-6.png">
-20. Use find () to list documents out.</br>
+20. Use find () to list documents out.<img src="https://github.com/korotetskiy/img/blob/main/db20.png">
