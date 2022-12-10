@@ -59,7 +59,7 @@ Connect to the databases a new user and verify that the privileges allow or deny
 16. Create the dump of your database.<img src="https://github.com/korotetskiy/img/blob/main/db16.png">
 
 <h3>PART 3 – MongoDB</h3>
-17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).
-18. Create a collection. Use db. create Collection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections.
+17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).</br><img src="https://github.com/korotetskiy/img/blob/main/db17-2.png"></br>
+18. Create a collection. Use db. create Collection to create a collection.</br></br><img src="https://github.com/korotetskiy/img/blob/main/db17-1.png"></br>
 19. Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats.
 20. Use find () to list documents out.
