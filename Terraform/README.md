@@ -5,5 +5,4 @@
 3. Terraform configuration</br><img src="https://github.com/korotetskiy/img/blob/main/t1-4.png">
 4. Terraform apply</br><img src="https://github.com/korotetskiy/img/blob/main/t1-5.png">
 </br><img src="https://github.com/korotetskiy/img/blob/main/t1-6.png">
-</br><img src="https://github.com/korotetskiy/img/blob/main/t1-7.png">
 </br><img src="https://github.com/korotetskiy/img/blob/main/t1-8.png">
