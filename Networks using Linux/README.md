@@ -1,4 +1,4 @@
-[Networks using Linux](https://github.com//tree/main/m1) 
+[Networks using Linux]
 ===============
 
 - [TASK_1.1 DevOps Introduction](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1)
