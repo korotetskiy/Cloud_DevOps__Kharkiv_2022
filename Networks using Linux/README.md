@@ -12,12 +12,15 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 <h4>Адреса мережі  Net3 –10.90.3.0/24,</h4>
 <h4>Адреса мережі Net4 –172.16.6.0/24.</h4>
 <h3>1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах.</h3><img src="https://github.com/korotetskiy/img/blob/main/n2.png">
-<h3>2. На  Server_1  налаштувати  DHCP  сервіс,  який  буде  конфігурувати  адреси  Int1 Client_1 та Client_2</h3><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp.png"> </h3><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp2.png"></h3><img src="https://github.com/korotetskiy/img/blob/main/n4-DHCP.png">
-
-<h3>3. За  допомогою  команд  ping  та  traceroute перевірити  зв'язок  між  віртуальними машинами.</h3><img src="https://github.com/korotetskiy/img/blob/main/n1-ping.png"> </h3><img src="https://github.com/korotetskiy/img/blob/main/n1-2- ping.png"></h3><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp-cl1.png">
+<h3>2. На  Server_1  налаштувати  DHCP  сервіс,  який  буде  конфігурувати  адреси  Int1 Client_1 та Client_2.
+</h3><h4>sudo apt install isc-dhcp-server</h4>
+<h4>Включаємо підтримку пересилання пакетів на всіх віртуальних хостах /etc/sysctl.conf, щоб трафік міг ходити між різними мережевими інтерфейсами.<br>
+nano /etc/sysctl.conf<br>	
+net.ipv4.conf.all.forwarding=1</h4><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp.png"> </h3><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp2.png"></h3><img src="https://github.com/korotetskiy/img/blob/main/n4-DHCP.png">
+<h3>3. За  допомогою  команд  ping  та  traceroute перевірити  зв'язок  між  віртуальними машинами.</h3><img src="https://github.com/korotetskiy/img/blob/main/n1-ping.png"><img src="https://github.com/korotetskiy/img/blob/main/n1-2- ping.png"><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp-cl1.png"><img src="https://github.com/korotetskiy/img/blob/main/n1-trace.png">
 Результат пояснити. 
-<h3>4. На  віртуальному  інтерфейсу  lo Client_1 призначити дві ІР  адреси  за  таким правилом:  172.17.D+10.1/24 та 172.17.D+20.1/24.  Налаштувати  маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1через Net4. Для перевірки використати traceroute.</h3>
-<h3>5.Розрахувати  спільну  адресу  та  маску  (summarizing) адрес  172.17.D+10.1та 172.17.D+20.1,  при  чому префіксмає  бути  максимально  можливим.  Видалити маршрути,  встановлені  на  попередньому  кроці  та  замінити  їх  об’єднаним маршрутом, якій має проходити через Server_1.</h3>
+<h3>4. На  віртуальному  інтерфейсу  lo Client_1 призначити дві ІР  адреси  за  таким правилом:  172.17.16.1/24 та 172.17.26.1/24.  Налаштувати  маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.16.1 проходив через Server_1, а до 172.17.26.1 через Net4. Для перевірки використати traceroute.</h3><img src="https://github.com/korotetskiy/img/blob/main/n4.png"><img src="https://github.com/korotetskiy/img/blob/main/n4-1.png">
+<h3>5.Розрахувати  спільну  адресу  та  маску  (summarizing) адрес  172.17.16.1та 172.17.26.1,  при  чому префіксмає  бути  максимально  можливим.  Видалити маршрути,  встановлені  на  попередньому  кроці  та  замінити  їх  об’єднаним маршрутом, якій має проходити через Server_1.</h3>
 <h3>6.Налаштувати  SSH  сервіс  таким  чином,  щоб  Client_1  та  Client_2  могли підключатись до Server_1 та один до одного.</h3> 
  
 <h3>7.Налаштуйте на Server_1 firewall таким чином:</h3>
@@ -26,84 +29,6 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 <h3>8.Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи.  На Server_1 налаштувати NATсервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет
 
 
-### REPORT IN SCREENSHOT
-> 1.	Install GIT on your workstation. 
-> 2.	Setup git: change your global configs (add name and email, setup core text editor). 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/1.jpg)
-
-> 3. Create account on GitHub. 
-> 4. Create new private repo on GitHub. 
-Repo name: DevOps_online_<City>_<year><quarter> Example: DevOps_online_Dnipro_2021Q4
-> 5. You can see example repository structure. 
-  	/ 
-       	 m1/ 
-task1.1/ 
-m2/ 
-task2.1/
- task2.2/ 
-… 
-… 
-m8/
- task8.1/ 
-task8.2/ 
-…
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/2.jpg)
-
-> 6. Clone repo to your workstation.
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/3.jpg)
-
-> 7. Open git console in root directory of your project and make next steps. 
-> 8. Do all your experiments in folder “task1.1”. 
-> 9. Create empty readme.txt file. 
-> 10. Make init commit. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/4.jpg)
-
-> 11. Create develop branch and checkout on it. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/5.jpg)
-
-> 12. Create index.html empty file. Commit. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/6.jpg)
-
-> 13. Create branch with name “images”. Checkout on it. Add images folder with some images inside it. Commit. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/7.jpg)
-
-> 14. Change your index.html. Add images source inside it. Commit. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/8.jpg)
-
-> 15. Go back to develop branch. 
-> 16. Create branch with name “styles”. Checkout on it. Add styles folder with styles source inside it. Commit. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/9.jpg)
-
-> 17. Change your index.html. Commit. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/10.jpg)
-
-> 18. Go to develop branch. 
-> 19. Merge two new branches into develop using git merge command. Resolve conflict if it appear. Do it in next sequence: 
-•merge “images” into “develop” 
-•merge “styles” into “develop”
-> 20. Do not delete any branches! 
-> 21. Merge develop into master. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/11.jpg)
-
-> 22. Try to inspect your repository with git log command. Use different options with this command (git log --help). 	
-> 23. Push all your changes with all your branches to origin (git push origin --all). 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/12.jpg)
-
-> 24. Execute command “git reflog“ and save it content somewhere (not in repository) with filename “task1.1_GIT.txt”. 
-
-[![*Report in screenshots*](screenshot/1.png?raw=true)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1/task1.1/screenshot/13.jpg)
 
 очистить существующие NAT правила:
 	
@@ -137,71 +62,4 @@ iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -j MASQUERADE
 
 
 post-up /sbin/iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -o eth3 -j SNAT --to-source 172.16.90.1-172.16.90.5 --persistent
-
-
-1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах.
-Int1  
-
-Int2
-
-Int3
-
-
-2. На Server_1 налаштувати DHCP сервіс, який буде конфігурувати адреси Int1
-Client_1 та Client_2
-
-Edit file - nano /etc/default/isc-dhcp-server 
-
-INTERFACES="eth1",  "eth2" - to Client_1 and Client_2  can get ip adress from DHCP
-
-Instaling DHCP server
-
-sudo apt install isc-dhcp-server
-
-# minimal sample /etc/dhcp/dhcpd.conf
-default-lease-time 600;
-max-lease-time 7200;
-
-subnet 192.168.1.0 netmask 255.255.255.0 {
- range 192.168.1.150 192.168.1.200;
- option routers 192.168.1.254;
- option domain-name-servers 192.168.1.1, 192.168.1.2;
- option domain-name "mydomain.example";
-}
-
-3. За допомогою команд ping та traceroute перевірити зв'язок між віртуальними
-машинами. Результат пояснити.
-
-
-
-
-4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким
-правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію
-таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до
-172.17.D+20.1 через Net4. Для перевірки використати traceroute.
-
-5. Розрахувати спільну адресу та маску (summarizing) адрес 172.17.D+10.1 та
-172.17.D+20.1, при чому префікс має бути максимально можливим. Видалити
-маршрути, встановлені на попередньому кроці та замінити їх об’єднаним
-маршрутом, якій має проходити через Server_1.
-
-6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли
-підключатись до Server_1 та один до одного.
-
-7. Налаштуйте на Server_1 firewall таким чином:
-
-• Дозволено підключатись через SSH з Client_1 та заборонено з Client_2
-• З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
-
-8. Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до
-мережі Інтернет – видалити відповідні записи. На Server_1 налаштувати NAT
-сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет
-
-
-
-
-
-
-
-
 
