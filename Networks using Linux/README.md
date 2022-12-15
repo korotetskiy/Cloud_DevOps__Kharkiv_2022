@@ -1,7 +1,8 @@
 Networks using Linux
 ===============
 > Практична частина модуля Linux Networking  передбачає створення засобами Virtual Box мережі, що показаний на малюнку 
-</br><img src="[https://github.com/korotetskiy/img/n1.png](https://github.com/korotetskiy/img/blob/main/n1.png?raw=true)">
+
+<img src="(https://github.com/korotetskiy/img/blob/main/n1.png?raw=true)">
 
 Host – це комп’ютер, на якому запущений Virtual Box;</br>
 Server_1  – Віртуальна машина, на якій розгорнуто ОС Linux. Int1 цієї машини в режимі «Мережевий міст» підключений до мережі Net1, тобто знаходиться в адресному просторі  домашньої  мережі.</br>
