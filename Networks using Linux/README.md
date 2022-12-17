@@ -44,19 +44,8 @@ sudo ufw deny from 10.10.2.11 to any port 22</br>
 <h4>service ufw restart</h4>Перевіряємо доступ з Client_2<img src="https://github.com/korotetskiy/img/blob/main/n7-7.png">
 <h3>8. На Server_1 налаштувати NAT сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет.</br>
 Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи. 
-
-
-
-
-очистить существующие NAT правила:
-	
-iptables -t nat --flush
-iptables добавить правило, например:
-iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -j SNAT --to-source 172.16.16.94
-Где, 192.168.99.0/24 внутренняя сеть, а 172.16.16.94 адрес через который нужно идти в интернет, аналогично прописываются другие внутренние сети.
-Если IP адрес на внешнем сетевом интерфейсе меняется (динамический), тогда вместо SNAT укажем MASQUERADE:
-	
-iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -j MASQUERADE
-
-post-up /sbin/iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -o eth3 -j SNAT --to-source 172.16.90.1-172.16.90.5 --persistent
+На віртуальнону хостi Server_1 додаємо правила NAT:
+<h4>iptables -t nat --flush</br>
+ptables -t nat -A POSTROUTING -s 10.10.2.0/24 -j MASQUERADE</br></h4>
+Перевіряємо доступ<img src="https://github.com/korotetskiy/img/blob/main/n8.png">
 
