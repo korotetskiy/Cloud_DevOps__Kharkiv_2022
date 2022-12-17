@@ -2,31 +2,31 @@
 [Cloud&DevOps Fundamentals Autumn 2022](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022)
 =======================================
 
-[MODULE 01 DevOps Introduction](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m1) 
+[1 Linux + Bash](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022/tree/main/Linux%20%2B%20Bash#readme) 
 =======================================
 
-[MODULE 02 Virtualization and Cloud Basic](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m2/) 
+[2 Database Administration](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022/tree/main/Database%20Administration#readme) 
 =======================================
 
-[MODULE 03 NETWORKING](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m3) 
+[3 Networks using Linux](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m3) 
 ===========================================================================
 
-[MODULE 04 DBA](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m4/) 
+[4 Virtualization and Cloud Basic (Azure)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m4/) 
 ===========================================================================
 
-[MODULE 05 LinuxEssentials](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m5) 
+[5 Virtualization and Cloud Basic (AWS)](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m5) 
 ===========================================================================
 
-[MODULE 06 LINUX NETWORKING](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m6) 
+[6 Jenkins](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m6) 
 ===========================================================================
 
-[MODULE 07 LINUX Administrations](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m7) 
+[7 Terraform](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m7) 
 ===========================================================================
 
-[MODULE 08 LINUX Administrations](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m8) 
+[8 Docker](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m8) 
 ===========================================================================
 
-[MODULE 09 LINUX Administrations](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m9) 
+[9 Ansible](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/tree/main/m9) 
 ===========================================================================
 
 [FINAL PROJECT](https://github.com/vasilkyiv/DevOps_online_Kiev_2021Q4/blob/main/FinalProject/FinalProject.md) 
