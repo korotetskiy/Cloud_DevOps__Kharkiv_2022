@@ -1,5 +1,5 @@
   
-[Cloud&DevOps Fundamentals Autumn 2022](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022)
+[Cloud&DevOps Fundamentals Autumn 2022](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022) 
 =======================================
 
 [1 Linux + Bash](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022/tree/main/Linux%20%2B%20Bash#readme) 
