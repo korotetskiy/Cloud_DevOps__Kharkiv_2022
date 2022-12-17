@@ -37,7 +37,7 @@ sudo ufw allow 22/tcp</h4>
 На віртуальнону хостi Server_1 додаємо правила для Client_1(10.10.2.10) та Client_2(10.10.2.10)</br>
 <h4>sudo ufw allow from 10.10.2.10 to any port 22</br>
 sudo ufw deny from 10.10.2.11 to any port 22</br>
-<img src="https://github.com/korotetskiy/img/blob/main/n7-0.png"><img src="https://github.com/korotetskiy/img/blob/main/n7-2.png">
+<img src="https://github.com/korotetskiy/img/blob/main/n7-01.png"><img src="https://github.com/korotetskiy/img/blob/main/n7-2.png">
 	
 
 
