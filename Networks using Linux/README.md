@@ -18,11 +18,19 @@ Client_1 та Client_2 – Віртуальні машини, на яких ро
 nano /etc/sysctl.conf<br>	
 net.ipv4.conf.all.forwarding=1</h4><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp.png"> </h3><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp2.png"></h3><img src="https://github.com/korotetskiy/img/blob/main/n4-DHCP.png">
 <h3>3. За  допомогою  команд  ping  та  traceroute перевірити  зв'язок  між  віртуальними машинами.</h3><img src="https://github.com/korotetskiy/img/blob/main/n1-ping.png"><img src="https://github.com/korotetskiy/img/blob/main/n1-2- ping.png"><img src="https://github.com/korotetskiy/img/blob/main/n3-dhcp-cl1.png"><img src="https://github.com/korotetskiy/img/blob/main/n1-trace.png">
-Результат пояснити. 
 <h3>4. На  віртуальному  інтерфейсу  lo Client_1 призначити дві ІР  адреси  за  таким правилом:  172.17.16.1/24 та 172.17.26.1/24.  Налаштувати  маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.16.1 проходив через Server_1, а до 172.17.26.1 через Net4. Для перевірки використати traceroute.</h3><img src="https://github.com/korotetskiy/img/blob/main/n4.png"><img src="https://github.com/korotetskiy/img/blob/main/n4-1.png">
 <h3>5.Розрахувати  спільну  адресу  та  маску  (summarizing) адрес  172.17.16.1 та 172.17.26.1,  при  чому префіксмає  бути  максимально  можливим.  Видалити маршрути,  встановлені  на  попередньому  кроці  та  замінити  їх  об’єднаним маршрутом, якій має проходити через Server_1.</h3><img src="https://github.com/korotetskiy/img/blob/main/n5.png"><img src="https://github.com/korotetskiy/img/blob/main/n5-3.png">
 <h3>6.Налаштувати  SSH  сервіс  таким  чином,  щоб  Client_1  та  Client_2  могли підключатись до Server_1 та один до одного.</h3> 
- 
+На віртуальних хостах Server_1, Client_1 та Client_2  встановлюємо пакет openssh-server:</br>
+<h4>sudo apt update</br>
+sudo apt install openssh-server</br>
+sudo systemctl status ssh</br>
+sudo ufw allow ssh</br>
+sudo ufw allow 22/tcp</h4>
+<img src="https://github.com/korotetskiy/img/blob/main/n6-4.png">
+Виконуємо аналогічно на хостах Client_1 та Client_2<img src="https://github.com/korotetskiy/img/blob/main/n6-5.jpg"> 
+Перевіряємо доступ <img src="https://github.com/korotetskiy/img/blob/main/n6-6.jpg">   
+
 <h3>7.Налаштуйте на Server_1 firewall таким чином:</h3>
 <h4>• Дозволено підключатись через SSH з Client_1 та заборонено з Client_2</h4>
 <h4>• Client_2 на 172.17.D+10.1 ping  проходив, а на 172.17.D+20.1 не проходив</h4>
