@@ -34,7 +34,7 @@ sudo ufw allow 22/tcp</h4>
 <h3>7.Налаштуйте на Server_1 firewall таким чином:</h3>
 <h4>• Дозволено підключатись через SSH з Client_1 та заборонено з Client_2</h4>
 <h4>• З Client_2 на 172.17.16.1 ping  проходив, а на 172.17.26.1 не проходив</h4>
-На віртуальнону хостi Server_1 додаємо правила для Client_1(10.10.2.10) та Client_2(10.10.2.10)</br>
+На віртуальнону хостi Server_1 додаємо правила для Client_1(10.10.2.10) та Client_2(10.10.2.11)</br>
 <h4>sudo ufw allow from 10.10.2.10 to any port 22</br>
 sudo ufw reject from 10.10.2.11 to any port 22</br>
 <img src="https://github.com/korotetskiy/img/blob/main/n7-01.png"><img src="https://github.com/korotetskiy/img/blob/main/n7-2.png"></br>
