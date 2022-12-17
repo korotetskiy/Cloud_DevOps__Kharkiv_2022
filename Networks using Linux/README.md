@@ -33,34 +33,26 @@ sudo ufw allow 22/tcp</h4>
 Перевіряємо доступ <img src="https://github.com/korotetskiy/img/blob/main/n6-6.png"><img src="https://github.com/korotetskiy/img/blob/main/n6-8.png">   
 <h3>7.Налаштуйте на Server_1 firewall таким чином:</h3>
 <h4>• Дозволено підключатись через SSH з Client_1 та заборонено з Client_2</h4>
-<h4>• Client_2 на 172.17.16.1 ping  проходив, а на 172.17.26.1 не проходив</h4>
+<h4>• З Client_2 на 172.17.16.1 ping  проходив, а на 172.17.26.1 не проходив</h4>
 На віртуальнону хостi Server_1 додаємо правила для Client_1(10.10.2.10) та Client_2(10.10.2.10)</br>
 <h4>sudo ufw allow from 10.10.2.10 to any port 22</br>
 sudo ufw deny from 10.10.2.11 to any port 22</br>
 <img src="https://github.com/korotetskiy/img/blob/main/n7-01.png"><img src="https://github.com/korotetskiy/img/blob/main/n7-2.png">
-	
+<h3>8. На Server_1 налаштувати NAT сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет.</br>
+Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи. 
 
 
-<h3>8.Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи.  На Server_1 налаштувати NATсервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет
-sudo ufw allow from 10.10.2.10 to any port 22
-sudo ufw deny from 10.10.2.11 to any port 22
 
 
 очистить существующие NAT правила:
 	
 iptables -t nat --flush
-
-
 iptables добавить правило, например:
 iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -j SNAT --to-source 172.16.16.94
-
 Где, 192.168.99.0/24 внутренняя сеть, а 172.16.16.94 адрес через который нужно идти в интернет, аналогично прописываются другие внутренние сети.
-
 Если IP адрес на внешнем сетевом интерфейсе меняется (динамический), тогда вместо SNAT укажем MASQUERADE:
-1
 	
 iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -j MASQUERADE
-
 
 post-up /sbin/iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -o eth3 -j SNAT --to-source 172.16.90.1-172.16.90.5 --persistent
 
