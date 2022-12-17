@@ -25,17 +25,18 @@ net.ipv4.conf.all.forwarding=1</h4><img src="https://github.com/korotetskiy/img/
 <h4>sudo apt update</br>
 sudo apt install openssh-server</br>
 sudo systemctl status ssh</br>
+sudo ufw enable</br>
 sudo ufw allow ssh</br>
 sudo ufw allow 22/tcp</h4>
 <img src="https://github.com/korotetskiy/img/blob/main/n6-4.png">
 Виконуємо аналогічно на хостах Client_1 та Client_2<img src="https://github.com/korotetskiy/img/blob/main/n6-5.jpg"> 
-Перевіряємо доступ <img src="https://github.com/korotetskiy/img/blob/main/n6-6.jpg">   
-
+Перевіряємо доступ <img src="https://github.com/korotetskiy/img/blob/main/n6-6.png">   
 <h3>7.Налаштуйте на Server_1 firewall таким чином:</h3>
 <h4>• Дозволено підключатись через SSH з Client_1 та заборонено з Client_2</h4>
 <h4>• Client_2 на 172.17.D+10.1 ping  проходив, а на 172.17.D+20.1 не проходив</h4>
 <h3>8.Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи.  На Server_1 налаштувати NATсервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет
-
+sudo ufw allow from 10.10.2.11 to any port 22
+sudo ufw deny from 10.10.2.11 to any port 22
 
 
 очистить существующие NAT правила:
@@ -43,25 +44,10 @@ sudo ufw allow 22/tcp</h4>
 iptables -t nat --flush
 
 
-включить поддержку пересылки пакетов в /etc/sysctl.conf, чтобы трафик мог ходить между разными сетевыми интерфейсами.
-Проверим текущее состояние:
-
-sysctl -w net.ipv4.conf.all.forwarding=1
-
-Чтобы после перезапуска системы оно не сбросилось, откроем файл /etc/sysctl.conf 
-nano /etc/sysctl.conf
-	
-net.ipv4.conf.all.forwarding=1
-
 iptables добавить правило, например:
 iptables -t nat -A POSTROUTING -s 192.168.99.0/24 -j SNAT --to-source 172.16.16.94
 
 Где, 192.168.99.0/24 внутренняя сеть, а 172.16.16.94 адрес через который нужно идти в интернет, аналогично прописываются другие внутренние сети.
-Напомню маску для частных сетей:
-	
-10.0.0.0/8
-172.16.0.0/12
-192.168.0.0/16
 
 Если IP адрес на внешнем сетевом интерфейсе меняется (динамический), тогда вместо SNAT укажем MASQUERADE:
 1
