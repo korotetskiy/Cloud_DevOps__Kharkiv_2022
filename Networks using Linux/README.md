@@ -36,14 +36,14 @@ sudo ufw allow 22/tcp</h4>
 <h4>• З Client_2 на 172.17.16.1 ping  проходив, а на 172.17.26.1 не проходив</h4>
 На віртуальнону хостi Server_1 додаємо правила для Client_1(10.10.2.10) та Client_2(10.10.2.10)</br>
 <h4>sudo ufw allow from 10.10.2.10 to any port 22</br>
-sudo ufw deny from 10.10.2.11 to any port 22</br>
+sudo ufw reject from 10.10.2.11 to any port 22</br>
 <img src="https://github.com/korotetskiy/img/blob/main/n7-01.png"><img src="https://github.com/korotetskiy/img/blob/main/n7-2.png"></br>
 На віртуальнону хостi Server_1 додаємо правила протоколу ICMP - в файл /etc/ufw/before.rules вносимо наступне:
 <h4>-A ufw-before-input -p icmp --icmp-type echo-request -s 172.17.26.0/24 -m state --state ESTABLISHED -j DENY</br>
 -A ufw-before-input -p icmp --icmp-type echo-request -s 172.17.16.0/24 -m state --state ESTABLISHED -j ACCEPT</h4></br>Та перезапускаймо  UFW сервіс  
 <h4>service ufw restart</h4>Перевіряємо доступ з Client_2<img src="https://github.com/korotetskiy/img/blob/main/n7-7.png">
 <h3>8. На Server_1 налаштувати NAT сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет.</br>
-Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи. 
+Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи.</h3>
 На віртуальнону хостi Server_1 додаємо правила NAT:
 <h4>iptables -t nat --flush</br>
 ptables -t nat -A POSTROUTING -s 10.10.2.0/24 -j MASQUERADE</br></h4>
