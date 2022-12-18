@@ -19,16 +19,16 @@
 1.	Create a separate resource group and deploy azure storage account<img src="https://github.com/korotetskiy/img/blob/main/azure2-1.png"></br>
 2.	Create a container with the name “tfstate” and remember the name "tfstate"  use portal settings. In this storage account you will be store your tf state file<img src="https://github.com/korotetskiy/img/blob/main/azure2-2.png"> </h3>   
 <h3>Terraform preparation</br>
-1.	Create another repo to store devops code
-2.	Create a folder terraform
-3.	Add app service implementation - https://learn.microsoft.com/en-us/azure/app-service/provision-resource-terraform 
-4.	Integrate application insights with app service
-5.	Updated backend “azurerm” according to the guide - https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli  
-6.	Run az login or Connect-AzAccount to connect the azure subscription from your local
-7.	Run terraform apply to deploy infrastructure 
+1.	Create another repo to store devops code</br>
+2.	Create a folder terraform</br>
+3.	Add app service implementation</br> - https://learn.microsoft.com/en-us/azure/app-service/provision-resource-terraform 
+4.	Integrate application insights with app service</br>
+5.	Updated backend "azurerm" according to the guide - https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli  </br>
+6.	Run az login or Connect-AzAccount to connect the azure subscription from your local</br>
+7.	Run terraform apply to deploy infrastructure </br>
 Important note: Use only freshest version of tf module like https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app
 Important note: Don’t forget to destroy your application once completed
-Create a terraform pipeline
+Create a terraform pipeline</br>
 1.	Create a yaml pipeline with the following steps: terraform install, terraform init, terraform plan/apply. Plan is an optional one 
 2.	Inside yaml pipeline add trigger to main branch. The scenario – when main is updated, pipeline should run automatically - https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/trigger?view=azure-pipelines
 3.	Added 3 steps – terraform install, terraform init, terraform plan/apply. Plan is an optional one. You may add it as 4th step
