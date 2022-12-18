@@ -8,8 +8,7 @@
 5.	Terraform knowledge is also required to do the stuff</br>
 6.	Az cli should be installed</br></h3>
 <h2>Homework Part 1 – Configure application</h2><h3>
-1.	Create a service connection in a Azure DevOps project to your subscription
-2.	</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-1.png"></br>
+1.	Create a service connection in a Azure DevOps project to your subscription</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-1.png"></br>
 3.	Find a .net pet project for the experiments</br>
 4.	Build your app locally .net project via dotnet tool. dotnet restore/build/run</br>
 6.	Create an Azure DevOps repo. You can use import repository to import from existing source control version like github.</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-4-repo.jpg"></br>
