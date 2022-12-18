@@ -47,5 +47,5 @@ sudo ufw reject from 10.10.2.11 to any port 22</br>
 На віртуальнону хостi Server_1 додаємо правила NAT:
 <h4>iptables -t nat --flush</br>
 iptables -t nat -A POSTROUTING -s 10.10.2.0/24 -j MASQUERADE</br></h4>
-Перевіряємо доступ<img src="https://github.com/korotetskiy/img/blob/main/n8.png">
+Перевіряємо доступ з хоста Client_2<img src="https://github.com/korotetskiy/img/blob/main/n8.png">
 
