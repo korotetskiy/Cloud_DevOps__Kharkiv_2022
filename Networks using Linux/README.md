@@ -46,6 +46,6 @@ sudo ufw reject from 10.10.2.11 to any port 22</br>
 Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до мережі  Інтернет – видалити  відповідні  записи.</h3>
 На віртуальнону хостi Server_1 додаємо правила NAT:
 <h4>iptables -t nat --flush</br>
-ptables -t nat -A POSTROUTING -s 10.10.2.0/24 -j MASQUERADE</br></h4>
+iptables -t nat -A POSTROUTING -s 10.10.2.0/24 -j MASQUERADE</br></h4>
 Перевіряємо доступ<img src="https://github.com/korotetskiy/img/blob/main/n8.png">
 
