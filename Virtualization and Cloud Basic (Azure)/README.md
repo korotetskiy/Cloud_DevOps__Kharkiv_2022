@@ -16,10 +16,9 @@
 <h3>Part 2 – Configure a pipeline to deploy infrastructure</h3>
 <h4>Below is describing on how to do it via terraform. If you want to use terraform you need to create service connection in manual way. Otherwise you won’t be able to deploy your iac – Navigate to the last section.</h4><img src="https://github.com/korotetskiy/img/blob/main/azure-pipleline.png">
 <h3>Terraform storage account
-1.	Create a separate resource group and deploy azure storage account<img src="https://github.com/korotetskiy/img/blob/main/azure2-1.png">
+1.	Create a separate resource group and deploy azure storage account<img src="https://github.com/korotetskiy/img/blob/main/azure2-1.png"></br>
 2.	Create a container with the name “tfstate” and remember the name "tfstate"  use portal settings. In this storage account you will be store your tf state file<img src="https://github.com/korotetskiy/img/blob/main/azure2-2.png"> </h3>   
-
-</br>Terraform preparation
+<h3>Terraform preparation</br>
 1.	Create another repo to store devops code
 2.	Create a folder terraform
 3.	Add app service implementation - https://learn.microsoft.com/en-us/azure/app-service/provision-resource-terraform 
