@@ -7,14 +7,14 @@
 4.	terraform should be installed </br>
 5.	Terraform knowledge is also required to do the stuff</br>
 6.	Az cli should be installed</br></h3>
-
-</br><img src="https://github.com/korotetskiy/img/blob/main/j1.png">
-</br>Homework Part 1 – Configure application
-1.	Create a service connection in a Azure DevOps project to your subscription - https://learn.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml
-2.	Find a .net pet project for the experiments
-3.	Build your app locally .net project via dotnet tool. dotnet restore/build/run
-4.	Create an Azure DevOps repo - https://learn.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops  You can use import repository to import from existing source control version like github
-5.	Create a branching policy for you application. Added yourself as a reviewer - https://learn.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser As branching strategy use a github flow (It will be applied by default when you strict commit to your main branch)
+<h2>Homework Part 1 – Configure application</h2>
+1.	Create a service connection in a Azure DevOps project to your subscription
+2.	</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-1.png">
+3.	Find a .net pet project for the experiments
+4.	Build your app locally .net project via dotnet tool. dotnet restore/build/run
+5.	
+6.	Create an Azure DevOps repo. You can use import repository to import from existing source control version like github.</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-4.png">
+7.	Create a branching policy for you application. Added yourself as a reviewer - https://learn.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser As branching strategy use a github flow (It will be applied by default when you strict commit to your main branch)
 </br>Part 2 – Configure a pipeline to deploy infrastructure 
 Below is describing on how to do it via terraform. If you want to use terraform you need to create service connection in manual way. Otherwise you won’t be able to deploy your iac – Navigate to the last section Terraform storage account 
 1.	Create a separate resource group and deploy azure storage account - https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal
