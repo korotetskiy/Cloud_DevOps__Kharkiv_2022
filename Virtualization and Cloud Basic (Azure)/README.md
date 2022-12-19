@@ -26,7 +26,7 @@
 <img src="https://github.com/korotetskiy/img/blob/main/azure-pr1.png">
 5.	Updated backend "azurerm" according to the guide </br><img src="https://github.com/korotetskiy/img/blob/main/azure-tp.png">
 6.	Run az login or Connect-AzAccount to connect the azure subscription from your local</br>
-7.	Run terraform apply to deploy infrastructure </br><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf1.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf2.png">
+7.	Run terraform apply to deploy infrastructure </br><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf2.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf1.png">
 Important note: Use only freshest version of tf module like https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app
 Important note: Don’t forget to destroy your application once completed
 Create a terraform pipeline</br>
