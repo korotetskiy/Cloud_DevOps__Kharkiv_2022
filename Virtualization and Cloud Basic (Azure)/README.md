@@ -9,10 +9,10 @@
 6.	Az cli should be installed</br></h3>
 <h2>Homework Part 1 – Configure application</h2><h3>
 1.	Create a service connection in a Azure DevOps project to your subscription</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-1.png"></br>
-3.	Find a .net pet project for the experiments</br>
-4.	Build your app locally .net project via dotnet tool. dotnet restore/build/run</br>
-6.	Create an Azure DevOps repo. You can use import repository to import from existing source control version like github.</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-4-repo.jpg"></br>
-7.	Create a branching policy for you application. Added yourself as a reviewer. As branching strategy use a github flow (It will be applied by default when you strict commit to your main branch)</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-5.png"></br></h3>
+2.	Find a .net pet project for the experiments</br>
+3.	Build your app locally .net project via dotnet tool. dotnet restore/build/run</br>
+4.	Create an Azure DevOps repo. You can use import repository to import from existing source control version like github.</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-4-repo.jpg"></br>
+5.	Create a branching policy for you application. Added yourself as a reviewer. As branching strategy use a github flow (It will be applied by default when you strict commit to your main branch)</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-5.png"></br></h3>
 <h3>Part 2 – Configure a pipeline to deploy infrastructure</h3>
 <h4>Below is describing on how to do it via terraform. If you want to use terraform you need to create service connection in manual way. Otherwise you won’t be able to deploy your iac – Navigate to the last section.</h4><img src="https://github.com/korotetskiy/img/blob/main/azure-pipleline.png">
 <h3>Terraform storage account</br>
