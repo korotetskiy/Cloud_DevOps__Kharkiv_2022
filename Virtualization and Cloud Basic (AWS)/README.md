@@ -15,19 +15,10 @@ Use, repeat as many as you can and have fun))  </br><img src="https://github.com
 11. Detach Disk_D from the 1st instance and attach disk_D to the new instance.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-11-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-11-2.png"></br>
 12. Review the 10-minute example. Explore the possibilities of creating your own domain and domain name for your site. Note, that Route 53 not free service. Alternatively you can free register the domain name *.PP.UA and use it.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-12-11.png"></br>
 13. Launch and configure a WordPress instance with Amazon Lightsail link.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-12-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-13-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-13-3.png"></br></br>   
-14. Review the 10-minute Store and Retrieve a File. Repeat, creating your own repository.</br>
- 
-
-15. Review the 10-minute example Batch upload files to the cloud to Amazon S3 using the AWS CLI. Create a user AWS IAM, configure CLI AWS and upload any files to S3.</br>
- 
- 
-  
- 
-16. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service (Amazon ECS). Repeat, create a cluster, and run the online demo application or better other application with custom settings.</br>
- 
- 
- 
-17. Run a Serverless "Hello, World!" with AWS Lambda.</br>
+14. Review the 10-minute Store and Retrieve a File. Repeat, creating your own repository.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-14-1.png"></br>
+15. Review the 10-minute example Batch upload files to the cloud to Amazon S3 using the AWS CLI. Create a user AWS IAM, configure CLI AWS and upload any files to S3.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-15-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-15-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-15-3.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-15-4.png"></br> 
+16. Review the 10-minute example Deploy Docker Containers on Amazon Elastic Container Service (Amazon ECS). Repeat, create a cluster, and run the online demo application or better other application with custom settings.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-16-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-16-2.png"></br>
+17. Run a Serverless "Hello, World!" with AWS Lambda.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-17-1.png"></br>
  
 
 18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53). Post on the page your own photo, the name of the educational program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with which the student worked within the educational program or earlier and the full list with links  of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.</h3>
