@@ -1,22 +1,6 @@
-Homework report in AWS Cloud Basic
-
-1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.
- 
-
- 
- 
- 
- 
-
- 
- 
-
-
-
-
- 
-2. Register with AWS (first priority) or alternatively, you can request access to courses in AWS
-Academy if you are currently a student of certain University.
+<h2>Homework report in AWS Cloud Basic</h2></br>
+<h3>1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-1-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-3.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-4.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-5.png"></br>
+2. Register with AWS (first priority) or alternatively, you can request access to courses in AWS Academy if you are currently a student of certain University.</br>
   
 3. Find the hands-on tutorials and AWS Well-Architected Labs for your AWS needs. 
 Explore list of step-by-step tutorials for deferent category. 
@@ -80,7 +64,7 @@ register the domain name *.PP.UA and use it.
 17. Run a Serverless "Hello, World!" with AWS Lambda.
  
 
-18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53). Post on the page your own photo, the name of the educational program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with which the student worked within the educational program or earlier and the full list with links  of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.
+18. Create a static website on Amazon S3, publicly available (link1 or link2 - using a custom domain registered with Route 53). Post on the page your own photo, the name of the educational program (EPAM Cloud&DevOps Fundamentals Autumn 2022), the list of AWS services with which the student worked within the educational program or earlier and the full list with links  of completed labs (based on tutorials or qwiklabs). Provide the link to the website in your report and СV.</h3>
  
 Labs
 Getting Started with Networking
