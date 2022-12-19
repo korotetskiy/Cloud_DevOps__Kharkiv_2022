@@ -21,9 +21,10 @@
 <h3>Terraform preparation</br>
 1.	Create another repo to store devops code</br>
 2.	Create a folder terraform</br>
-3.	Add app service implementation</br> - https://learn.microsoft.com/en-us/azure/app-service/provision-resource-terraform 
+3.	Add app service implementation</br> 
 4.	Integrate application insights with app service</br>
-5.	Updated backend "azurerm" according to the guide - https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli  </br>
+<img src="https://github.com/korotetskiy/img/blob/main/azure-pr1.png">
+5.	Updated backend "azurerm" according to the guide </br><img src="https://github.com/korotetskiy/img/blob/main/azure-tp.png">
 6.	Run az login or Connect-AzAccount to connect the azure subscription from your local</br>
 7.	Run terraform apply to deploy infrastructure </br>
 Important note: Use only freshest version of tf module like https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app
