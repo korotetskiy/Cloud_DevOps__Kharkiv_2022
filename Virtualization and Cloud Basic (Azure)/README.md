@@ -10,7 +10,7 @@
 <h2>Homework Part 1 – Configure application</h2><h3>
 1.	Create a service connection in a Azure DevOps project to your subscription</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-1.png"></br>
 2.	Find a .net pet project for the experiments</br>
-3.	Build your app locally .net project via dotnet tool. dotnet restore/build/run</br>
+3.	Build your app locally .net project via dotnet tool. dotnet restore/build/run</br><img src="https://github.com/korotetskiy/img/blob/main/azure_wa.png">
 4.	Create an Azure DevOps repo. You can use import repository to import from existing source control version like github.</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-4-repo.jpg"></br>
 5.	Create a branching policy for you application. Added yourself as a reviewer. As branching strategy use a github flow (It will be applied by default when you strict commit to your main branch)</br><img src="https://github.com/korotetskiy/img/blob/main/azure1-5.png"></br></h3>
 <h3>Part 2 – Configure a pipeline to deploy infrastructure</h3>
