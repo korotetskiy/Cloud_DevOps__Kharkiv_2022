@@ -9,12 +9,8 @@ Use, repeat as many as you can and have fun))  </br><img src="https://github.com
 5. Register and pass free courses on AWS Skillbuilder. AWS Cloud Practitioner Essentials: Core Services, AWS Cloud Practitioner Essentials: Cloud Concepts. Try AWS Cloud Quest: Cloud Practitioner.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-5-1.png"></br> 
 6. Pass free courses on Amazon qwiklabs.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-6-1.png"></br>
 7. Review Getting Started with Amazon EC2. Log Into Your AWS Account, Launch, Configure, Connect and Terminate Your Instance. Do not use Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-7-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-7-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-7-3.png"></br>  
-8. Create a snapshot of your instance to keep as a backup.</br>
- 
-
-
-
-9. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.</br>
+8. Create a snapshot of your instance to keep as a backup.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-8-1.png"></br>
+9. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-9-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-3.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-4.png"></br>
  
   
  
