@@ -37,4 +37,4 @@ Important note: Use only freshest version of tf module like https://registry.ter
 1.	Add yml pipeline to the application folder</br>
 2.	Your pipeline structure should contain 2 stages. 1st – build, create zip archieve, and publish an artifact. 2nd – download an artifact and deploy it to azure app service </br><img src="https://github.com/korotetskiy/img/blob/main/azure_wa1.png"></br>
 3.	To deploy .zip to app service use azure app service deployment task</br></h3>
-</br></br>Don’t forget to grant access on the subscription level for your enterprise application (service principal)
+</br>Don’t forget to grant access on the subscription level for your enterprise application (service principal)
