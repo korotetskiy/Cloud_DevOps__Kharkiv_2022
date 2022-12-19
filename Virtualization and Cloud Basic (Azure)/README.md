@@ -26,10 +26,10 @@
 <img src="https://github.com/korotetskiy/img/blob/main/azure-pr1.png">
 5.	Updated backend "azurerm" according to the guide </br><img src="https://github.com/korotetskiy/img/blob/main/azure-tp.png">
 6.	Run az login or Connect-AzAccount to connect the azure subscription from your local</br>
-7.	Run terraform apply to deploy infrastructure </br><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf2.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf1.png">
+7.	Run terraform apply to deploy infrastructure </br><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf2.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf1.png"></h3>
 Important note: Use only freshest version of tf module like https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app
-Important note: Don’t forget to destroy your application once completed
-Create a terraform pipeline</br>
+</br>Important note: Don’t forget to destroy your application once completed
+<h3>Create a terraform pipeline</br>
 1.	Create a yaml pipeline with the following steps: terraform install, terraform init, terraform plan/apply. Plan is an optional one 
 2.	Inside yaml pipeline add trigger to main branch. The scenario – when main is updated, pipeline should run automatically - https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/trigger?view=azure-pipelines
 3.	Added 3 steps – terraform install, terraform init, terraform plan/apply. Plan is an optional one. You may add it as 4th step
