@@ -30,13 +30,11 @@
 Important note: Use only freshest version of tf module like https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/windows_web_app
 </br>Important note: Don’t forget to destroy your application once completed
 <h3>Create a terraform pipeline</br>
-1.	Create a yaml pipeline with the following steps: terraform install, terraform init, terraform plan/apply. Plan is an optional one 
+1.	Create a yaml pipeline with the following steps: terraform install, terraform init, terraform plan/apply. Plan is an optional one</br>
 2.	Inside yaml pipeline add trigger to main branch. The scenario – when main is updated, pipeline should run automatically - https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/trigger?view=azure-pipelines
-3.	Added 3 steps – terraform install, terraform init, terraform plan/apply. Plan is an optional one. You may add it as 4th step
-</br>Part 3 – Create a deploy pipeline to app service
-1.	Add yml pipeline to the application folder
+3.	Added 3 steps – terraform install, terraform init, terraform plan/apply. Plan is an optional one. You may add it as 4th step</br>
+</br>Part 3 – Create a deploy pipeline to app service</br>
+1.	Add yml pipeline to the application folder</br>
 2.	Your pipeline structure should contain 2 stages. 1st – build, create zip archieve, and publish an artifact. 2nd – download an artifact and deploy it to azure app service 
-3.	To deploy .zip to app service use azure app service deployment task
-Service connection – manual way
-https://4bes.nl/2019/07/11/step-by-step-manually-create-an-azure-devops-service-connection-to-azure/
+3.	To deploy .zip to app service use azure app service deployment task</br></h3>
 Don’t forget to grant access on the subscription level for your enterprise application (service principal)
