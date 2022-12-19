@@ -5,18 +5,10 @@
 Explore list of step-by-step tutorials for deferent category. </br>
 Use, repeat as many as you can and have fun))  </br><img src="https://github.com/korotetskiy/img/blob/main/aws-3-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-3-2.png"></br>
 4. Register and pass courses on AWS Educate. Filter by checking Topic Cloud Computing and Foundational Level. Feel free to pass more. </br> 
-
-5. Register and pass free courses on AWS Skillbuilder. AWS Cloud Practitioner Essentials: Core Services, AWS Cloud Practitioner Essentials: Cloud Concepts. Try AWS Cloud Quest: Cloud Practitioner.</br>
- 
- 
-6. Pass free courses on Amazon qwiklabs
- 
-
-
-7. Review Getting Started with Amazon EC2. Log Into Your AWS Account, Launch, Configure, Connect and Terminate Your Instance. Do not use Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.</br>
- 
- 
-  
+<img src="https://github.com/korotetskiy/img/blob/main/aws-4-1.png"></br>
+5. Register and pass free courses on AWS Skillbuilder. AWS Cloud Practitioner Essentials: Core Services, AWS Cloud Practitioner Essentials: Cloud Concepts. Try AWS Cloud Quest: Cloud Practitioner.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-5-1.png"></br> 
+6. Pass free courses on Amazon qwiklabs.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-6-1.png"></br>
+7. Review Getting Started with Amazon EC2. Log Into Your AWS Account, Launch, Configure, Connect and Terminate Your Instance. Do not use Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-7-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-7-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-7-3.png"></br>  
 8. Create a snapshot of your instance to keep as a backup.</br>
  
 
