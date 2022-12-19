@@ -33,7 +33,7 @@ Important note: Use only freshest version of tf module like https://registry.ter
 1.	Create a yaml pipeline with the following steps: terraform install, terraform init, terraform plan/apply. Plan is an optional one</br>
 2.	Inside yaml pipeline add trigger to main branch. The scenario – when main is updated, pipeline should run automatically.
 3.	Added 3 steps – terraform install, terraform init, terraform plan/apply. Plan is an optional one. You may add it as 4th step</br></br><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf2.png"><img src="https://github.com/korotetskiy/img/blob/main/azure_run_tf1.png">
-</br>Part 3 – Create a deploy pipeline to app service</br>
+</br></br>Part 3 – Create a deploy pipeline to app service</br>
 1.	Add yml pipeline to the application folder</br>
 2.	Your pipeline structure should contain 2 stages. 1st – build, create zip archieve, and publish an artifact. 2nd – download an artifact and deploy it to azure app service 
 3.	To deploy .zip to app service use azure app service deployment task</br></h3>
