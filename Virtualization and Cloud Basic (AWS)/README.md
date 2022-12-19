@@ -1,9 +1,9 @@
-<h2>Homework report in AWS Cloud Basic</h2></br>
+<h2>Homework report in AWS Cloud Basic</h2>
 <h3>1. Read the terms of Using the AWS Free Tier and the ability to control their own costs.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-1-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-3.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-4.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-1-5.png"></br>
-2. Register with AWS (first priority) or alternatively, you can request access to courses in AWS Academy if you are currently a student of certain University.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-2-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-2-2.png">
+2. Register with AWS (first priority) or alternatively, you can request access to courses in AWS Academy if you are currently a student of certain University.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-2-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-2-2.png"></br>
 3. Find the hands-on tutorials and AWS Well-Architected Labs for your AWS needs. </br>
 Explore list of step-by-step tutorials for deferent category. </br>
-Use, repeat as many as you can and have fun))  </br><img src="https://github.com/korotetskiy/img/blob/main/aws-3-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-3-2.png">
+Use, repeat as many as you can and have fun))  </br><img src="https://github.com/korotetskiy/img/blob/main/aws-3-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-3-2.png"></br>
 4. Register and pass courses on AWS Educate. Filter by checking Topic Cloud Computing and Foundational Level. Feel free to pass more. </br> 
 
 5. Register and pass free courses on AWS Skillbuilder. AWS Cloud Practitioner Essentials: Core Services, AWS Cloud Practitioner Essentials: Cloud Concepts. Try AWS Cloud Quest: Cloud Practitioner.</br>
