@@ -10,25 +10,11 @@ Use, repeat as many as you can and have fun))  </br><img src="https://github.com
 6. Pass free courses on Amazon qwiklabs.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-6-1.png"></br>
 7. Review Getting Started with Amazon EC2. Log Into Your AWS Account, Launch, Configure, Connect and Terminate Your Instance. Do not use Amazon Lightsail. It is recommended to use the t2 or t3.micro instance and the CentOS operating system.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-7-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-7-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-7-3.png"></br>  
 8. Create a snapshot of your instance to keep as a backup.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-8-1.png"></br>
-9. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-9-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-3.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-4.png"></br>
- 
-  
- 
- 
-10. Launch the second instance from backup.</br>
- 
- 
-
-11. Detach Disk_D from the 1st instance and attach disk_D to the new instance.</br>
- 
- 
-
-12. Review the 10-minute example. Explore the possibilities of creating your own domain and domain name for your site. Note, that Route 53 not free service. Alternatively you can free register the domain name *.PP.UA and use it.</br>
- 
-
-13. Launch and configure a WordPress instance with Amazon Lightsail link.</br>
- 
-   
+9. Create and attach a Disk_D (EBS) to your instance to add more storage space. Create and save some file on Disk_D.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-9-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-2.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-3.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-9-4.png"></br> 
+10. Launch the second instance from backup.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-10-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-10-2.png"></br>
+11. Detach Disk_D from the 1st instance and attach disk_D to the new instance.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-11-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-11-2.png"></br>
+12. Review the 10-minute example. Explore the possibilities of creating your own domain and domain name for your site. Note, that Route 53 not free service. Alternatively you can free register the domain name *.PP.UA and use it.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-12-1.png"></br>
+13. Launch and configure a WordPress instance with Amazon Lightsail link.</br><img src="https://github.com/korotetskiy/img/blob/main/aws-13-1.png"><img src="https://github.com/korotetskiy/img/blob/main/aws-13-2.png"></br></br>   
 14. Review the 10-minute Store and Retrieve a File. Repeat, creating your own repository.</br>
  
 
