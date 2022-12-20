@@ -1,7 +1,7 @@
 <h2>Containerization. Docker practice</h2>
 <head>
 <h3>Docker practice basics</h3>
-1. Install using the repository</br><img src="https://github.com/korotetskiy/img/blob/main/d1.png">
+<h3>1. Install using the repository</br><img src="https://github.com/korotetskiy/img/blob/main/d1.png"></br>
 2. Add Docker’s official GPG key:</br>
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \</br>
 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</br>
@@ -58,34 +58,4 @@ $ docker volume rm my-vol
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Frequently used Docker commands
-$ docker ps [-a]
-$ docker stop $(docker ps -a -q)
-$ docker rm 0fd99ee0cb61
-$ docker images -a
-$ docker rmi $(docker images -a -q)
-#list
-#stop all containers [you need stop before delete]
-#remove a single container
-# list
-# remove all images
-$ docker search tomcat
-$ docker pull tomcat
-$ docker search nginx
-$ docker pull nginx
-$ docker run -it -p 8889:8080 tomcat
-$ docker run -it -p 8888:80 nginx
-$ docker run -d -p 8890:80 nginx
+</h3>
