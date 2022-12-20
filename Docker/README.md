@@ -13,3 +13,14 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io</h3></br>
 <img src="https://github.com/korotetskiy/img/blob/main/db1.png"></br>
 <img src="https://github.com/korotetskiy/img/blob/main/db3.png">
 4.
+
+
+Create directory for Dockerfile(-s) and and dive into it.
+$ mkdir dockerfiles
+$ cd dockerfiles
+Edit it and add the commands with nano:
+$ nano Dockerfile
+Finally build it:
+$ docker build -t <tag> .
+
+Create an account in Docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
