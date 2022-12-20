@@ -8,7 +8,7 @@ Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E
 $ sudo apt-key fingerprint 0EBFCD88</br>
 <h3>3. Installing Docker Engine</br>
 <h3>$ sudo apt-get update</br>
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3>
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="https://github.com/korotetskiy/img/blob/main/d34.png">
 <h4>Verify that Docker Engine is installed correctly by running the hello-world image.</h4><h3>$ sudo docker run hello-world</br></h3></h4><img src="https://github.com/korotetskiy/img/blob/main/d31.png">
 <h3>4. Create an account in Docker registry</h3><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
 Login to docker registry<img src="https://github.com/korotetskiy/img/blob/main/d33.png">
