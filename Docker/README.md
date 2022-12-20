@@ -24,3 +24,68 @@ Finally build it:
 $ docker build -t <tag> .
 
 <h3>Create an account in Docker registry</h3></br><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
+Login to docker registry
+
+Pushing to docker registry
+
+Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-\
+$(uname -m)" -o /usr/local/bin/docker-compose
+Apply executable permissions to the binary:
+sudo chmod +x /usr/local/bin/docker-compose
+
+Create a docker-compose.yml file that starts your WordPress blog and a separate MySQL instance with a volume mount for data persistence:
+
+
+Build the project In order to buil the project, run following command from your project directory.
+docker-compose up -d
+This runs docker-compose up in detached mode, pulls the needed Docker images, and starts the wordpress and database containers, as shown in the example below.
+
+Docker Compose. Wordpress realization
+
+
+Docker Compose. Use volumes
+Create and manage volumes
+You can create and manage volumes outside the scope of any container.
+Create a volume:
+$ docker volume create my-vol
+List volumes:
+$ docker volume ls
+Inspect a volume:
+$ docker volume inspect my-vol
+Remove a volume:
+$ docker volume rm my-vol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frequently used Docker commands
+$ docker ps [-a]
+$ docker stop $(docker ps -a -q)
+$ docker rm 0fd99ee0cb61
+$ docker images -a
+$ docker rmi $(docker images -a -q)
+#list
+#stop all containers [you need stop before delete]
+#remove a single container
+# list
+# remove all images
+$ docker search tomcat
+$ docker pull tomcat
+$ docker search nginx
+$ docker pull nginx
+$ docker run -it -p 8889:8080 tomcat
+$ docker run -it -p 8888:80 nginx
+$ docker run -d -p 8890:80 nginx
