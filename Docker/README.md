@@ -10,7 +10,7 @@ $ sudo apt-key fingerprint 0EBFCD88</br>
 3. Installing Docker Engine</br>
 <h3>$ sudo apt-get update</br>
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io</h3></br>
-<img src="https://github.com/korotetskiy/img/blob/main/db1.png"></br>
+<img src="https://github.com/korotetskiy/img/blob/main/d22.png"></br>
 <img src="https://github.com/korotetskiy/img/blob/main/db3.png">
 4.
 
