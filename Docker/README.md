@@ -1,7 +1,7 @@
 <h2>Containerization. Docker practice</h2>
 <head>
 <h3>Docker practice basics</h3>
-1. Install using the repository</br><img src="https://github.com/korotetskiy/img/blob/main/d1.png"></br>
+1. Install using the repository</br><img src="https://github.com/korotetskiy/img/blob/main/d1.png">
 2. Add Docker’s official GPG key:</br>
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \</br>
 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</br>
