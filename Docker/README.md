@@ -23,4 +23,4 @@ $ nano Dockerfile
 Finally build it:
 $ docker build -t <tag> .
 
-Create an account in Docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
+<h3>Create an account in Docker registry</h3></br><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
