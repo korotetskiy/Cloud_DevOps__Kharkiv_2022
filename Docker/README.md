@@ -3,14 +3,14 @@
 <h3>Docker practice basics</h3>
 <h3>1. Install using the repository <h3>$ sudo apt-get update</br>$ sudo apt install docker.io</h3>
 </br><img src="https://github.com/korotetskiy/img/blob/main/d1.png"></br>
-2. Add Docker’s official GPG key:</br>
+<h3>2. Add Docker’s official GPG key:</br></h3>
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \</br>
 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</br>
 Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.</br>
 $ sudo apt-key fingerprint 0EBFCD88</br>
 <h3>3. Installing Docker Engine</br>
 <h3>$ sudo apt-get update</br>
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3></br>
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3>
 <h3>Verify that Docker Engine is installed correctly by running the hello-world image.</br>
 $ sudo docker run hello-world</br><img src="https://github.com/korotetskiy/img/blob/main/d31.png">
 4.<h3>Create an account in Docker registry</h3></br><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
