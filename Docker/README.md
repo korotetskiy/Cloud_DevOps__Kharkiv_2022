@@ -12,7 +12,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="
 <h4>Verify that Docker Engine is installed correctly by running the hello-world image.</h4><h3>$ sudo docker run hello-world</br></h3></h4><img src="https://github.com/korotetskiy/img/blob/main/d31.png">
 <h3>4. Docker practice basics</h3><img src="https://github.com/korotetskiy/img/blob/main/d36.png">
 <h3>5. Create an account in Docker registry</h3><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
-Login to docker registry<img src="https://github.com/korotetskiy/img/blob/main/d33.png">
+<h3>6.Login to docker registry<img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
 
 Pushing to docker registry
 
