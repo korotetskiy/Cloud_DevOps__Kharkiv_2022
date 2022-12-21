@@ -10,17 +10,17 @@ $ sudo apt-key fingerprint 0EBFCD88</br>
 <h3>$ sudo apt-get update</br>
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="https://github.com/korotetskiy/img/blob/main/d34.png">
 <h4>Verify that Docker Engine is installed correctly by running the hello-world image.</h4><h3>$ sudo docker run hello-world</br></h3></h4><img src="https://github.com/korotetskiy/img/blob/main/d31.png">
-<h3>4. Docker practice basics</h3><img src="https://github.com/korotetskiy/img/blob/main/d36.png">
+<h3>4. Docker practice basics</h3><img src="https://github.com/korotetskiy/img/blob/main/d36.png"><img src="https://github.com/korotetskiy/img/blob/main/d37.png">
 <h3>5. Create an account in Docker registry</h3><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
 <h3>6.Login to docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
 
 Pushing to docker registry
 
-Install Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-\
-$(uname -m)" -o /usr/local/bin/docker-compose
+<h3>7.Install Docker Compose</h3>
+<h4>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-\</br>
+$(uname -m)" -o /usr/local/bin/docker-compose</h4>
 Apply executable permissions to the binary:
-sudo chmod +x /usr/local/bin/docker-compose
+<h4>sudo chmod +x /usr/local/bin/docker-compose</h4><img src="https://github.com/korotetskiy/img/blob/main/d38.png">
 
 Create a docker-compose.yml file that starts your WordPress blog and a separate MySQL instance with a volume mount for data persistence:
 
