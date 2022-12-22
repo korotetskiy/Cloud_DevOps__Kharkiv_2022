@@ -24,7 +24,7 @@ Apply executable permissions to the binary:
 <h4>sudo chmod +x /usr/local/bin/docker-compose</h4><img src="https://github.com/korotetskiy/img/blob/main/d38.png">
 Create a docker-compose.yml file that starts your WordPress blog and a separate MySQL instance with a volume mount for data persistence:<img src="https://github.com/korotetskiy/img/blob/main/d44.png">
 <h3>Docker Compose. Wordpress realization</h3>
-This runs docker-compose up in detached mode, pulls the needed Docker images, and starts the wordpress and database containers, as shown in the example below.</br><img src="https://github.com/korotetskiy/img/blob/main/d42.png"><img src="https://github.com/korotetskiy/img/blob/main/d43.png">
+This runs docker-compose up in detached mode, pulls the needed Docker images, and starts the wordpress and database containers, as shown in the example below.</br><img src="https://github.com/korotetskiy/img/blob/main/n42.png"><img src="https://github.com/korotetskiy/img/blob/main/d43.png">
 <img src="https://github.com/korotetskiy/img/blob/main/D49.png">
 <h3>Docker Compose. Use volumes</h3></br>
 Create a volume:</br>
