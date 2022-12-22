@@ -6,17 +6,18 @@ $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \</br>
 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</br>
 Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.</br>
 $ sudo apt-key fingerprint 0EBFCD88</br>
-<h3>3. Installing Docker Engine</br>
+<h3>2. Installing Docker Engine</br>
 <h3>$ sudo apt-get update</br>
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="https://github.com/korotetskiy/img/blob/main/d34.png">
 <h4>Verify that Docker Engine is installed correctly by running the hello-world image.</h4><h3>$ sudo docker run hello-world</br></h3></h4><img src="https://github.com/korotetskiy/img/blob/main/d31.png">
-<h3>4. Docker practice basics</h3><img src="https://github.com/korotetskiy/img/blob/main/d36.png"><img src="https://github.com/korotetskiy/img/blob/main/d37-1.png"><img src="https://github.com/korotetskiy/img/blob/main/d4.png">
-<h3>5. Create an account in Docker registry</h3><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
-<h3>6.Login to docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
-
-Pushing to docker registry
-
-<h3>7.Install Docker Compose</h3>
+<h3>3. Docker practice basics</h3><img src="https://github.com/korotetskiy/img/blob/main/d36.png"><img src="https://github.com/korotetskiy/img/blob/main/d37-1.png"><img src="https://github.com/korotetskiy/img/blob/main/d4.png">
+<h3>4. Create an account in Docker registry</h3><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
+<h3>5.Login to docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
+<h3>6. Webapps with Docker</h3>
+<img src="https://github.com/korotetskiy/img/blob/main/d9.png">
+<h3>7. Pushing to docker registry</h3>
+<img src="https://github.com/korotetskiy/img/blob/main/d91.png">
+<h3>8. Install Docker Compose</h3>
 <h4>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-\</br>
 $(uname -m)" -o /usr/local/bin/docker-compose</h4>
 Apply executable permissions to the binary:
@@ -35,6 +36,3 @@ Inspect a volume:</br>
 Remove a volume:</br>
 <h4>$ docker volume rm my-vol</h4>
 <img src="https://github.com/korotetskiy/img/blob/main/d45.png"></br>
-<h3>10. Webapps with Docker</h3>
-<img src="https://github.com/korotetskiy/img/blob/main/d9.png">
-
