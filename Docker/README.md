@@ -39,14 +39,14 @@ This runs docker-compose up in detached mode, pulls the needed Docker images, an
 Docker Compose. Wordpress realization
 
 
-<h3>Docker Compose. Use volumes</br>
+<h3>Docker Compose. Use volumes</h3></br>
 Create a volume:</br>
-$ docker volume create my-vol</br>
+<h4>$ docker volume create my-vol</h4>
 List volumes:</br>
-$ docker volume ls</br>
+<h4>$ docker volume ls</h4>
 Inspect a volume:</br>
-$ docker volume inspect my-vol</br>
+<h4>$ docker volume inspect my-vol</h4>
 Remove a volume:</br>
-$ docker volume rm my-vol</br>
+<h4>$ docker volume rm my-vol</h4>
 <img src="https://github.com/korotetskiy/img/blob/main/d45.png"></br>
 </h3>
