@@ -36,4 +36,5 @@ Remove a volume:</br>
 <h4>$ docker volume rm my-vol</h4>
 <img src="https://github.com/korotetskiy/img/blob/main/d45.png"></br>
 <h3>10. Webapps with Docker</h3>
+<img src="https://github.com/korotetskiy/img/blob/main/d9.png">
 
