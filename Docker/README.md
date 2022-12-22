@@ -28,7 +28,7 @@ Create a docker-compose.yml file that starts your WordPress blog and a separate 
 <img src="https://github.com/korotetskiy/img/blob/main/d42.png">
 <img src="https://github.com/korotetskiy/img/blob/main/d43.png">
 <img src="https://github.com/korotetskiy/img/blob/main/D49.png">
-<img src="https://github.com/korotetskiy/img/blob/main/d45.png">
+
 
 
 
@@ -39,18 +39,14 @@ This runs docker-compose up in detached mode, pulls the needed Docker images, an
 Docker Compose. Wordpress realization
 
 
-Docker Compose. Use volumes
-Create and manage volumes
-You can create and manage volumes outside the scope of any container.
-Create a volume:
-$ docker volume create my-vol
-List volumes:
-$ docker volume ls
-Inspect a volume:
-$ docker volume inspect my-vol
-Remove a volume:
-$ docker volume rm my-vol
-
-
-
+<h3>Docker Compose. Use volumes</br>
+Create a volume:</br>
+$ docker volume create my-vol</br>
+List volumes:</br>
+$ docker volume ls</br>
+Inspect a volume:</br>
+$ docker volume inspect my-vol</br>
+Remove a volume:</br>
+$ docker volume rm my-vol</br>
+<img src="https://github.com/korotetskiy/img/blob/main/d45.png"></br>
 </h3>
