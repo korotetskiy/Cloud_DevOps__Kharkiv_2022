@@ -1,7 +1,7 @@
 <h2>Containerization. Docker practice</h2>
 <head>
 <h3>Docker practice basics</h3>
-1. Install using the repository <h4>$ sudo apt-get update</br>$ sudo apt install docker.io</h4><img src="https://github.com/korotetskiy/img/blob/main/d1.png"><h3>2. Add Docker’s official GPG key:</br></h3>
+<h3>1. Install using the repository</h3> <h4>$ sudo apt-get update</br>$ sudo apt install docker.io</h4><img src="https://github.com/korotetskiy/img/blob/main/d1.png"><h3>2. Add Docker’s official GPG key:</br></h3>
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg \</br>
 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</br>
 Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.</br>
@@ -12,7 +12,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="
 <h4>Verify that Docker Engine is installed correctly by running the hello-world image.</h4><h3>$ sudo docker run hello-world</br></h3></h4><img src="https://github.com/korotetskiy/img/blob/main/d31.png">
 <h3>3. Docker practice basics</h3><img src="https://github.com/korotetskiy/img/blob/main/d36.png"><img src="https://github.com/korotetskiy/img/blob/main/d37-1.png"><img src="https://github.com/korotetskiy/img/blob/main/d4.png">
 <h3>4. Create an account in Docker registry</h3><img src="https://github.com/korotetskiy/img/blob/main/d21.png">
-<h3>5.Login to docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
+<h3>5. Login to docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
 <h3>6. Webapps with Docker</h3>
 <img src="https://github.com/korotetskiy/img/blob/main/d9.png">
 <h3>7. Pushing to docker registry</h3>
