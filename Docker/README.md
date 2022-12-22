@@ -26,7 +26,7 @@ Create a docker-compose.yml file that starts your WordPress blog and a separate 
 <h3>Docker Compose. Wordpress realization</h3>
 This runs docker-compose up in detached mode, pulls the needed Docker images, and starts the wordpress and database containers, as shown in the example below.</br><img src="https://github.com/korotetskiy/img/blob/main/d41.png"><img src="https://github.com/korotetskiy/img/blob/main/n42.png"><img src="https://github.com/korotetskiy/img/blob/main/d43.png">
 <img src="https://github.com/korotetskiy/img/blob/main/D49.png">
-<h3>9. Docker Compose. Use volumes</h3></br>
+<h3>9. Docker Compose. Using volumes</h3></br>
 Create a volume:</br>
 <h4>$ docker volume create my-vol</h4>
 List volumes:</br>
