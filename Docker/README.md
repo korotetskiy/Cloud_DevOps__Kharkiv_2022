@@ -22,7 +22,7 @@ $(uname -m)" -o /usr/local/bin/docker-compose</h4>
 Apply executable permissions to the binary:
 <h4>sudo chmod +x /usr/local/bin/docker-compose</h4><img src="https://github.com/korotetskiy/img/blob/main/d38.png">
 
-Create a docker-compose.yml file that starts your WordPress blog and a separate MySQL instance with a volume mount for data persistence:
+Create a docker-compose.yml file that starts your WordPress blog and a separate MySQL instance with a volume mount for data persistence:<img src="https://github.com/korotetskiy/img/blob/main/d44.png">
 
 
 Build the project In order to buil the project, run following command from your project directory.
