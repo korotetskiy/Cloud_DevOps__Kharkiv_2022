@@ -15,7 +15,6 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="
 <h3>6.Login to docker registry</br><img src="https://github.com/korotetskiy/img/blob/main/d33.png"></h3>
 
 Pushing to docker registry
-<img src="https://github.com/korotetskiy/img/blob/main/d4.png">
 <img src="https://github.com/korotetskiy/img/blob/main/d41.png">
 <h3>7.Install Docker Compose</h3>
 <h4>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-\</br>
