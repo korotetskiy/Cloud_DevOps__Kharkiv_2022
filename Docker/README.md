@@ -17,18 +17,14 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io runc</h3><img src="
 Pushing to docker registry
 <img src="https://github.com/korotetskiy/img/blob/main/d4.png">
 <img src="https://github.com/korotetskiy/img/blob/main/d41.png">
-
 <h3>7.Install Docker Compose</h3>
 <h4>sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-\</br>
 $(uname -m)" -o /usr/local/bin/docker-compose</h4>
 Apply executable permissions to the binary:
 <h4>sudo chmod +x /usr/local/bin/docker-compose</h4><img src="https://github.com/korotetskiy/img/blob/main/d38.png">
-
 Create a docker-compose.yml file that starts your WordPress blog and a separate MySQL instance with a volume mount for data persistence:<img src="https://github.com/korotetskiy/img/blob/main/d44.png">
 <h3>Docker Compose. Wordpress realization</h3>
 This runs docker-compose up in detached mode, pulls the needed Docker images, and starts the wordpress and database containers, as shown in the example below.</br><img src="https://github.com/korotetskiy/img/blob/main/d42.png">
-<img src="https://github.com/korotetskiy/img/blob/main/d43.png">
-<img src="https://github.com/korotetskiy/img/blob/main/D49.png">
 <h3>Docker Compose. Use volumes</h3></br>
 Create a volume:</br>
 <h4>$ docker volume create my-vol</h4>
@@ -39,4 +35,6 @@ Inspect a volume:</br>
 Remove a volume:</br>
 <h4>$ docker volume rm my-vol</h4>
 <img src="https://github.com/korotetskiy/img/blob/main/d45.png"></br>
-</h3>
+<h3>Webapps with Docker</h3>
+<img src="https://github.com/korotetskiy/img/blob/main/d43.png">
+<img src="https://github.com/korotetskiy/img/blob/main/D49.png">
