@@ -24,27 +24,6 @@ Use, repeat as many as you can and have fun))  </br><img src="https://github.com
 
 [vkor.pp.ua](http://vkor.pp.ua) 
 =======================================
- 
-Labs
-Getting Started with Networking
-https://awseducate.instructure.com/courses/866
-Getting Started with Compute
-https://awseducate.instructure.com/courses/817
-Getting Started with Storage
-https://awseducate.instructure.com/courses/815
-Builder Labs
-https://awseducate.instructure.com/courses/761
-Introduction to Cloud 101
-https://awseducate.instructure.com/courses/746
-Machine Learning Foundations
-https://awseducate.instructure.com/courses/756
-AWS DeepRacer Primer
-https://awseducate.instructure.com/courses/750
-
-Cloud Building  https://awseducate.instructure.com/courses/232
-Algorithms https://awseducate.instructure.com/courses/231
-Cloud Computing https://awseducate.instructure.com/courses/230
-Program Design
-https://awseducate.instructure.com/courses/233
+@2022 
 
 
