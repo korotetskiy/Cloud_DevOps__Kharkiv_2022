@@ -40,7 +40,6 @@ https://awseducate.instructure.com/courses/756
 AWS DeepRacer Primer
 https://awseducate.instructure.com/courses/750
 
-
 Cloud Building  https://awseducate.instructure.com/courses/232
 Algorithms https://awseducate.instructure.com/courses/231
 Cloud Computing https://awseducate.instructure.com/courses/230
