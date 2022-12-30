@@ -22,7 +22,7 @@ Add the following line to /etc/apt/sources.list:
    
    <img src="https://github.com/korotetskiy/img/blob/main/a_inst.jpg">
 
-hosts - server config file</br>
+hosts - Servers config file</br>
 ansible.cfg - Ansible config file
 
 
