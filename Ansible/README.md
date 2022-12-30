@@ -1,7 +1,7 @@
 Configuration Management. Ansible 
 ===============
 
-1. Installing Ansible on Ubuntu 20.04/22.04
+1. Installing Ansible on Ubuntu 20.04/22.04</br>
 Add the following line to /etc/apt/sources.list:
 
     > deb http://ppa.launchpad.net/ansible/ansible/ubuntu [version Linux Name] main
