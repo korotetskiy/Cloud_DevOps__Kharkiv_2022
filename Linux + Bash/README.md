@@ -1,14 +1,4 @@
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="essets/Css/style.css">
-</head>
-    <div class="starter-template">
-      <h1>Home tasks</h1>
-      <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="essets/Css/style.css">
-
-<h2>A. Create a script that uses the following keys:</h2></br>
+ <h2>A. Create a script that uses the following keys:</h2></br>
 1. When starting without parameters, it will display a list of possible keys and their description.</br>
 2. The --all key displays the IP addresses and symbolic names of all hosts in the current subnet.</br>
 3. The --target key displays a list of open system TCP ports.</br>
