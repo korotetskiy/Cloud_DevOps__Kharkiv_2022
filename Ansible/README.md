@@ -241,7 +241,8 @@ Or as a graph:
     ...
 
 2.3 Removing shared variables from the hosts file
-above, we moved the common variables with user data into a separate block. But in practice, it is more professional to transfer such data to a separate file. 
+
+Above, we moved the common variables with user data into a separate block. But in practice, it is more professional to transfer such data to a separate file. 
     ...
     [test_servers]
     testi ansible_host=192.168.0.20
