@@ -87,7 +87,7 @@ We enter this data into our hosts file:
     #removed one server and added a link to the SSH key
     test ansible_host=192.168.0.20 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
 
-You can try to connect to the server, the first time you connect to the server it will ask for a fingerprint: "Are you sure you want to continue connecting (yes/no)". After confirmation, he does not ask again. But if you are connecting for the first time to 100 servers, then you will have to answer for each. A simple example command:
+Now we try to connect to the server, the first time you connect to the server it will ask for a fingerprint: "Are you sure you want to continue connecting (yes/no)". After confirmation, he does not ask again. But if you are connecting for the first time to 100 servers, then you will have to answer for each. A simple example command:
     ansible -i hosts all -m ping
     The authenticity of ...
     ... Are you sure you want to continue connecting (yes/no)
