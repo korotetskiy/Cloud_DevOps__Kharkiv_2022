@@ -26,32 +26,21 @@ Add the following line to /etc/apt/sources.list:
 hosts - Servers config file</br>
 ansible.cfg - Ansible config file
 
+Change to the ansible directory and check the contents:
 
-> $ sudo mkdir playbooks
+    
+    > cd /etc/ansible/
+    > ls -la
+    drwxr-xr-x   3 root root  4096 Nov 18 12:22 .
+    drwxr-xr-x 122 root root  4096 Nov 10 15:03 ..
+    -rw-r--r--   1 root root 20340 Nov 15 13:58 ansible.cfg
+    -rw-r--r--   1 root root   615 Nov 18 12:22 hosts
 
-====================================
-1. Ansible - что это и для чего? Разбираем основы
-Если вы только установили Ansible, необходимо перейти в его каталог и проверить содержимое:
+2.1 Setting up the hosts file for our servers
 
-    # переходим
-    cd /etc/ansible/
-    # проверяем содержимое и права
-    ls -la
-    drwxr-xr-x   3 root root  4096 сен 18 12:22 .
-    drwxr-xr-x 122 root root  4096 окт 10 15:03 ..
-    -rw-r--r--   1 root root 20340 сен 15 13:58 ansible.cfg
-    -rw-r--r--   1 root root   615 сен 18 12:22 hosts
+    > sudo nano hosts
 
-Немного теории
-Ansible - это система управления конфигурациями, написанная на Python. Более простым языком: это универсальный инструмент позволяющий выполнять некий структурированный список команд (написанный на языке YML, в виде скрипта) на нескольких серверах.
-Если у вас несколько серверов 5...100, то при попытке даже простого обновления пакетов, вы потеряете уйму времени на подключение к каждому из этих серверов по отдельности. Ansible дает универсальное средство решить данную проблему, как? читаем дальше!
-
-2. Настройка файла hosts под наши сервера
-Прежде всего нам надо настроить список наших серверов, на которые мы будем отправлять наши данные. Для этого заходим в файл hosts:
-
-    sudo nano hosts
-
-Содержимое файла hosts будем примерно таким:
+The contents of the hosts file will be something like this:
 
     # Ex 1: Ungrouped hosts, specify before any group headers.
      
@@ -65,41 +54,40 @@ Ansible - это система управления конфигурациям�
     #192.168.1.100
     ...
 
-Допустим у нас есть сервера c IP 192.168.0.10 и 192.168.0.20 (локальный). Добавим наши сервера в файл выше и укажем данные для подключения к ним (пояснения прямо в коде):
+We have servers with IP 192.168.0.10 and 192.168.0.20 (local). Let's add our servers to the file above and specify the data to connect to them:
 
     ...
     # Ex 2: A collection of hosts belonging to the 'webservers' group
     ...
-    [debi_servers]
-    #можно просто указать сервер, его IP
+    [test_servers]
+    # IP
     192.168.0.10
-    #можно присвоить имя, указать пользователя и его пароль
-    debi ansible_host=192.168.0.20 ansible_user=debiuser ansible_pass=password123
+    #you can assign a name, specify a user and his password
+    test ansible_host=192.168.0.20 ansible_user=vkor ansible_pass=P@ssw0rd
     ...
 
-Пример заполнения выше, с данными пользователя, не совсем корректный. Лучше использовать SSH. О том как его настроить, ссылка на статью в самом начале. Смотрим где у нас находится ключ SSH:
+ It's better to use an SSH key:
 
-    # из корня домашней папки переходим в папку с ключами
+    # from the root of the home folder go to the folder with the keys
     cd .ssh
-    # проверяем содержание
+    # checking content
     ls -la
-    итого 28
-    drwx------  2 debuser debuser 4096 окт  9 16:34 .
-    drwxr-xr-x 18 debuser debuser 4096 окт 10 15:02 ..
-    -rw-------  1 debuser debuser  399 сен 11 12:02 id_ed25519
-    -rw-r--r--  1 debuser debuser   95 сен 11 12:02 id_ed25519.pub
-    # смотрим путь до ключа
+    total 28
+    drwx------  2 vkor vkor 4096 Nov  9 16:34 .
+    drwxr-xr-x 18 vkor vkor 4096 Nov 10 15:02 ..
+    -rw-------  1 vkor vkor  399 Nov 11 12:02 id_ed25519
+    -rw-r--r--  1 vkor vkor   95 Nov 11 12:02 id_ed25519.pub
+    # look at the way to the key
     pwd
-    /home/debuser/.ssh
+    /home/vkor/.ssh
 
-Вносим эти данные в наш файл hosts:
+We enter this data into our hosts file:
 
-    [debi_servers]
-    #убрали один сервер и добавили ссылку на SSH ключ
-    debi ansible_host=192.168.0.20 ansible_user=debiuser ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
+    [test_servers]
+    #removed one server and added a link to the SSH key
+    test ansible_host=192.168.0.20 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
 
-Можно попробывать подключиться к серверу. Есть один момент, при подключении первый раз к серверу он спросит отпечаток: "Are you sure you want to continue connecting (yes/no)". После подтверждения, он больше не спрашивает. Но если вы подключаетесь первый раз к 100 серверам, то придеться отвечать по каждому. Простая команда для примера:
-
+You can try to connect to the server, the first time you connect to the server it will ask for a fingerprint: "Are you sure you want to continue connecting (yes/no)". After confirmation, he does not ask again. But if you are connecting for the first time to 100 servers, then you will have to answer for each. A simple example command:
     ansible -i hosts all -m ping
     The authenticity of ...
     ... Are you sure you want to continue connecting (yes/no)
@@ -108,126 +96,122 @@ Ansible - это система управления конфигурациям�
         "ping": "pong"
     }
 
-Чтобы отменить проверку отпечатка на каждый сервер и не прописывать файл сервера, заполняем файл ansible.cfg. Обычно эти значения уже есть в шаблоне, надо только их раскомментировать:
+To cancel the fingerprint check for each server and not prescribe the server file, fill in the ansible.cfg file. Usually these values are already in the template, you just need to uncomment them:
 
     [defaults]
-    # строчка которая указывает файл с серверами по умолчанию
+    # a line that specifies a file with default servers
     inventory      = /etc/ansible/hosts
-    # строчка которая отменяет проверку первичного подключения (yes/no)
+    #  line that cancels the primary connection check (yes/no)
     host_key_checking = false
 
-Повторяем команду выше, но уже сокращенный вариант:
+We repeat the command above, but already an abbreviated version:
 
-    # all - все сервера из файла, -m модуль
+    # all - all servers from file, -m modul
     ansible all -m ping
     debi | SUCCESS => {
         "changed": false,
         "ping": "pong"
     }
 
-3. Создаем файл inventory или hosts
+2.2 Create an inventory or hosts file
 
-Объединение серверов в группы:
-Допустим у вас много серверов: сервера баз, сервера приложений, сервера итогового проекта PROD. Тогда это можно записать в файл hosts в разных вариантах:
+Combining servers into groups:
+Let's say you have a lot of servers: a database server, an application server, a PROD final project server. Then it can be written to the hosts file in different ways:
 
-    # все сервера ниже входят в группу all
+    # servers below are in the all group
      
     192.168.0.12
     192.168.0.14
      
-    [debi_servers]
-    debi ansible_host=192.168.0.20 ansible_user=debiuser ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
-    debi2 ansible_host=192.168.0.32 ansible_user=debiuser ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
+    [test_servers]
+    test ansible_host=192.168.0.20 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
+    test2 ansible_host=192.168.0.32 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
      
-    # тестовый пред прод сервер баз
+    # test pre-prod database server
     [staging_DB]
     192.168.0.1
     192.168.0.2
      
-    # тестовый пред прод сервер баз 2 (обратите внимание на индекс DB и db, это разные группы)
+    # test pre-prod database server 2
     [staging_db]
     192.168.0.3
     192.168.0.4
      
-    # тестовый пред прод сервер приложений
+    # test start pre-prod application server
     [staging_APP]
     192.168.0.5
     192.168.0.6
      
-    # тестовый пред прод сервер приложений
+    # test pre-prod application server
     [prod_APP]
     192.168.0.7
     192.168.0.8
      
-    # сервер базы PROD
+    # PROD database server
     [prod_DB]
     192.168.0.15
     192.168.0.16
      
-    # Объединим группы серверов в одну более крупную
+    # Combine groups of servers into one larger one
     [staging_ALL:children]
     staging_DB
     staging_db
     staging_APP
      
-    # группа которая объединяет все DB
+    # A group that unites all DBs
     [DB_ALL:children]
     staging_DB
     staging_db
     prod_DB
 
-Тем самым, вот так просто вы можем составлять группы, а в созданные группы еще группы. Это удобно, главное не переборщить.
-
-Объединение общих данных для серверов:
-Теперь объединим данные для авторизации для серверов debi:
-
-Было:
+Now let's combine authorization data for debi servers:
+Fare:
 
     ...
-    [debi_servers]
-    debi ansible_host=192.168.0.20 ansible_user=debiuser ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
-    debi2 ansible_host=192.168.0.32 ansible_user=debiuser ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
+    [test_servers]
+    test ansible_host=192.168.0.20 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
+    test2 ansible_host=192.168.0.32 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
     ...
 
-Стало:
+It became:
 
     ...
-    [debi_servers]
-    debi ansible_host=192.168.0.20
-    debi2 ansible_host=192.168.0.32
+    [test_servers]
+    test ansible_host=192.168.0.20
+    test2 ansible_host=192.168.0.32
     ...
-    # так как у нас одинаковые пользователи и ключи, переносим их в отдельный блок
-    [debi_servers:vars]
-    ansible_user=debiuser
-    ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
+    # since we have the same users and keys, we transfer them to a separate block
+    [test_servers:vars]
+    ansible_user=vkor
+    ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
     ...
 
-Свободные переменные для серверов:
+Free variables for servers:
 
     ...
-    # Объединим группы серверов в одну более крупную
+    # combine groups of servers into one larger one
     [staging_ALL:children]
     staging_DB
     staging_db
     staging_APP
     ...
-    # staging_ALL - группа выше, параметру message присвоили значение Help. Это значение можно применять в рамках всей нашей группы "staging_ALL"
+    # staging_ALL - group above, the message parameter was set to Help.
     [staging_ALL:vars]
     message=Help
     ...
 
 
-Просмотреть переменные, группы и сервера:
+View variables, groups and servers:
 
-    # Фрагмент выполнения команды
+    # Command execution fragment
     ansible-inventory --list
     {
         "_meta": {
             "hostvars": {
-                "debi": {
+                "test": {
                     "ansible_host": "192.168.0.20",
-                    "ansible_ssh_private_key_file": "/home/debuser/.ssh/id_ed25519",
-                    "ansible_user": "debiuser"
+                    "ansible_ssh_private_key_file": "/home/vkor/.ssh/id_ed25519",
+                    "ansible_user": "vkor"
                 }
             }
         },
@@ -239,76 +223,73 @@ Ansible - это система управления конфигурациям�
         },
         "test_server": {
             "hosts": [
-                "debi"
+                "test"
             ]
         },
         "ungrouped": {}
     }
     ...
 
-Или в виде графа:
+Or as a graph:
 
-    # фрагмент
+    # fragment
     ansible-inventory --graph
     @all:
       |--@test_server:
-      |  |--debi
+      |  |--test
       |--@ungrouped:
     ...
 
-4. Выносим общие переменные из файла hosts
-В пункте 3 мы вынесли общие переменные с данными пользователя в отдельный блок. Но на практике, такие данные более професионально выносить в отдельный файл. Это мы сейчас и сделаем:
-
-Было:
-
+2.3 Removing shared variables from the hosts file
+above, we moved the common variables with user data into a separate block. But in practice, it is more professional to transfer such data to a separate file. 
     ...
-    [debi_servers]
-    debi ansible_host=192.168.0.20
-    debi2 ansible_host=192.168.0.32
+    [test_servers]
+    testi ansible_host=192.168.0.20
+    test2 ansible_host=192.168.0.32
     ...
-    # так как у нас одинаковые пользователи и ключи, переносим их в отдельный блок
+    # ince we have the same users and keys, we transfer them to a separate block
     [debi_servers:vars]
-    ansible_user=debiuser
-    ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
+    ansible_user=vkor
+    ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
     ...
 
-Проверям что у нас в каталоге Ansible:
+Let's check what we have in the ansible directory:
 
     ls -la
-    drwxr-xr-x   3 root root  4096 окт 14 13:21 .
-    drwxr-xr-x 122 root root  4096 окт 14 10:34 ..
-    -rw-r--r--   1 root root 20340 сен 15 13:58 ansible.cfg
-    -rw-r--r--   1 root root   670 окт 14 13:21 hosts
+    drwxr-xr-x   3 root root  4096 Nov 14 13:21 .
+    drwxr-xr-x 122 root root  4096 Nov 14 10:34 ..
+    -rw-r--r--   1 root root 20340 Nov 15 13:58 ansible.cfg
+    -rw-r--r--   1 root root   670 Nov 14 13:21 hosts
 
-Создаем директорию group_vars и переходим в неё:
+Create a group_vars directory and go to it:
 
     sudo mkdir group_vars
     ls -la
-    drwxr-xr-x   4 root root  4096 окт 14 14:07 .
-    drwxr-xr-x 122 root root  4096 окт 14 10:34 ..
-    -rw-r--r--   1 root root 20340 сен 15 13:58 ansible.cfg
-    drwxr-xr-x   2 root root  4096 окт 14 14:07 group_vars
-    -rw-r--r--   1 root root   670 окт 14 13:21 hosts
+    drwxr-xr-x   4 root root  4096 Nov 14 14:07 .
+    drwxr-xr-x 122 root root  4096 Nov 14 10:34 ..
+    -rw-r--r--   1 root root 20340 Nov 15 13:58 ansible.cfg
+    drwxr-xr-x   2 root root  4096 Nov 14 14:07 group_vars
+    -rw-r--r--   1 root root   670 Nov 14 13:21 hosts
     cd group_vars
 
-Создаем файл с нашим именем группы серверов debi_servers:
+Create a file with server group names test_servers:
 
-    nano debi_servers
+    nano test_servers
 
-Внутри прописываем:
+Inside we write:
 
-    # знак "="меняем на ":", это важно!
-    ansible_user                  :  debiuser
-    ansible_ssh_private_key_file  :  /home/debuser/.ssh/id_ed25519
-    # добавим данные: для какого сервера и имя автора
+    # the sign "=" is changed to ":", this is important!
+    ansible_user                  :  vkor
+    ansible_ssh_private_key_file  :  /home/vkor/.ssh/id_ed25519
+    # add data: for which server and the name of the author
     environment                   :  PROD
-    owner                         :  Kostya
+    owner                         :  Vladimir
 
-Сохраняем. В файле hosts эти строчки полностью стираете:
+Save changes. In the hosts file, we completely erase these lines:
 
-    [debi_servers:vars]
-    ansible_user=debiuser
-    ansible_ssh_private_key_file=/home/debuser/.ssh/id_ed25519
+    [test_servers:vars]
+    ansible_user=vkor
+    ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
 
 =======================================================
 
@@ -318,4 +299,4 @@ Playbook creations:
  >   $ cd playbooks/
  >    nano install_mc.yml
     
-  
+  Ansible is a configuration management system, a universal tool that allows you to execute a structured list of commands (written in YML, in the form of a script) on multiple servers.
