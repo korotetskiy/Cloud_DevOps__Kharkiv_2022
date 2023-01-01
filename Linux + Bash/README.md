@@ -10,7 +10,6 @@ echo "nmap tool is required to complete this task"
 echo "Checking if nmap is installed..."
 sleep 1
 # Checking if nmap is installed
-
 apt list --installed 2>/dev/null | grep "nmap" > .tmp
 if [ -s .tmp ]; then
     echo "nmap is already installed"
@@ -26,9 +25,7 @@ if [ -s .tmp ]; then
         fi
 fi 
 rm -f .tmp
-
 # First function to scan active hosts on particular subnet
-
 all ()
 {
     ipv4patternsub="([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\/([1-2][0-9]|[3][0-1]))"
@@ -39,7 +36,6 @@ all ()
             echo "Enter correct subnet format"
     fi
 }
-
 #Second function to scan open ports on particular system
 target ()
 {
@@ -51,7 +47,6 @@ target ()
             echo "Enter correct IP address format"
     fi
 }
-
 # Executing functions according to user input
 case $1 in
     --all)
@@ -89,7 +84,6 @@ if [ -e $logfile ]; then
     while :
     do
         # Setting up options menu according to the task
-
         echo "Please choose the option: "
         echo "1. From which ip were the most requests?"
         echo "2. What is the most requested page?"
@@ -101,7 +95,6 @@ if [ -e $logfile ]; then
         echo " "
         printf "Type [1-6] : \n" ; read option
             case $option in
-
                 # 1. From which ip were the most requests?
                 1) cat $logfile | awk '{ print $1 }' | uniq -c | sort -nr | head -5
                     printf "\n\n"
@@ -125,7 +118,6 @@ if [ -e $logfile ]; then
                 rm -f file
                     ;;
                 # 5. What time did site get the most requests?
-
                 5) requests () {
                         printf "between 8:00 and 9:00:\t"
                         cat $logfile | awk '{print $4}' | sed 's/\[//g' | sed -n '/25\/Apr\/2017\:08./ p' | printf "`wc -l` requests\n"
@@ -144,7 +136,7 @@ if [ -e $logfile ]; then
                     requests | sed -n "/$topreq/p" | sed -n 's/^/Site got most requests /p' | sed -n 's/and [0-9][0-9]\:00/&\-/p'
                     printf "\n\n"
                     ;; 
-                
+              
                 # 6. What search bots have accessed the site?
                 6) cat $logfile | awk '/[B|b][O|o][T|t]/{print $1,$12,$13,$14,$15,$16,$17}'  | sed 's/\(\"Mozilla\/5\.0\|(compatible\;\|Linux x86\_64\)//g' | \
                     sed -n '/[B|b][O|o][T|t]/p' | uniq -c | sort -nr
