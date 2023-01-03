@@ -29,8 +29,8 @@ ansible.cfg - Ansible config file
 Change to the ansible directory and check the contents:
 
     
-    > cd /etc/ansible/
-    > ls -la
+    $ cd /etc/ansible/
+    $ ls -la
     drwxr-xr-x   3 root root  4096 Nov 18 12:22 .
     drwxr-xr-x 122 root root  4096 Nov 10 15:03 ..
     -rw-r--r--   1 root root 20340 Nov 15 13:58 ansible.cfg
