@@ -302,6 +302,7 @@ Save changes. In the hosts file, we completely erase these lines:
     ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
     
 <h3>2.5 Checking Ansible inventory file</h3>
+
 ```
 $ ansible-inventory --list -y
 Output
