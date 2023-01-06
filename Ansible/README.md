@@ -307,11 +307,15 @@ all:
     servers:
       hosts:
         server1:
-          ansible_host: 192.168.0.20
+          ansible_host: 192.168.0.1
           ansible_python_interpreter: /usr/bin/python3
         server2:
-          ansible_host: 192.168.0.32
+          ansible_host: 192.168.0.2
           ansible_python_interpreter: /usr/bin/python3
+        server3:
+          ansible_host: 192.168.0.3
+          ansible_python_interpreter: /usr/bin/python3
+          ...
     ungrouped: {}
    
    ````
