@@ -90,7 +90,10 @@ Now we try to connect to the server, the first time you connect to the server it
 > "Are you sure you want to continue connecting (yes/no)". 
 
 A simple example command:
->    ansible -i hosts all -m ping
+
+```
+ansible -i hosts all -m ping
+```
 
 The authenticity of ... Are you sure you want to continue connecting (yes/no)
     
@@ -350,7 +353,7 @@ server3 | SUCCESS => {
  Now we verify Ansible playbook
  
  ```
- ansible-playbook /etc/ansible/example_playbook.yaml --check --diff
+ ansible-playbook /etc/ansible/example_playbook.yaml --syntax-check --diff
  ```
  
  Now we execute this Ansible playbook
@@ -360,11 +363,5 @@ server3 | SUCCESS => {
  ```
 <img src="https://github.com/korotetskiy/img/blob/main/a_p2.png">
  
-
- vkor@jsrv:~$ ansible-playbook my-first-playbook.yml --syntax-check
-
    
- >   $ cd playbooks/
- >    nano install_mc.yml
-    
   Ansible is a configuration management system, a universal tool that allows you to execute a structured list of commands (written in YML, in the form of a script) on multiple servers.
