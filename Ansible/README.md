@@ -279,7 +279,7 @@ Create a group_vars directory and go to it:
     -rw-r--r--   1 root root   670 Nov 14 13:21 hosts
     cd group_vars
 
-Create a file with server group names test_servers:
+2.4 Create a file with server group names test_servers:
 
     nano test_servers
 
@@ -298,7 +298,7 @@ Save changes. In the hosts file, we completely erase these lines:
     ansible_user=vkor
     ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
     
-Checking inventory file
+2.5 Checking Ansible inventory file
 ```
 $ ansible-inventory --list -y
 Output
@@ -319,13 +319,41 @@ all:
     ungrouped: {}
    
    ````
-   
-    
+2.6 Connectivity testing Ansible hosts
 
-=======================================================
+```
+$ ansible all -m ping -u root
+Output
+server1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+server2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+server3 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
 
+```
 
-Playbook creations:
+ 3 Ansible Playbook creations</br>
+ Let's, create a playbook:
+ 
+ ```
+ $ sudo nano /etc/ansible/example_playbook.yaml
+ ```
+ <img src="https://github.com/korotetskiy/img/blob/main/a_p1.png">
+ Now we execute this Ansible playbook
+ ```
+ $ ansible-playbook /etc/ansible/example_playbook.yaml -K
+ ```
+ <img src="https://github.com/korotetskiy/img/blob/main/a_p2.png">
+ 
+ vkor@jsrv:~$ ansible-playbook my-first-playbook.yml --syntax-check
+
    
  >   $ cd playbooks/
  >    nano install_mc.yml
