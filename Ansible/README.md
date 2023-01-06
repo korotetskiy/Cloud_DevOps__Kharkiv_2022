@@ -364,4 +364,4 @@ server3 | SUCCESS => {
 <img src="https://github.com/korotetskiy/img/blob/main/a_p2.png">
  
    
-  Ansible is a configuration management system, a universal tool that allows you to execute a structured list of commands (written in YML, in the form of a script) on multiple servers.
+  <h3>Ansible is a configuration management system, a universal tool that allows you to execute a structured list of commands (written in YML, in the form of a script) on multiple servers.</h3>
