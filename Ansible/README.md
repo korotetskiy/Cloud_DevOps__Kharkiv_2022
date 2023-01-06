@@ -346,12 +346,15 @@ server3 | SUCCESS => {
  $ sudo nano /etc/ansible/example_playbook.yaml
  ```
  <img src="https://github.com/korotetskiy/img/blob/main/a_p1.png">
+ 
  Now we execute this Ansible playbook
+ 
  ```
  $ ansible-playbook /etc/ansible/example_playbook.yaml -K
  ```
- <img src="https://github.com/korotetskiy/img/blob/main/a_p2.png">
+<img src="https://github.com/korotetskiy/img/blob/main/a_p2.png">
  
+
  vkor@jsrv:~$ ansible-playbook my-first-playbook.yml --syntax-check
 
    
