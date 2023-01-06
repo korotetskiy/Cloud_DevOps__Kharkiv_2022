@@ -297,6 +297,26 @@ Save changes. In the hosts file, we completely erase these lines:
     [test_servers:vars]
     ansible_user=vkor
     ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
+    
+Checking inventory file
+```
+$ ansible-inventory --list -y
+Output
+all:
+  children:
+    servers:
+      hosts:
+        server1:
+          ansible_host: 192.168.0.20
+          ansible_python_interpreter: /usr/bin/python3
+        server2:
+          ansible_host: 192.168.0.32
+          ansible_python_interpreter: /usr/bin/python3
+    ungrouped: {}
+   
+   ````
+   
+    
 
 =======================================================
 
