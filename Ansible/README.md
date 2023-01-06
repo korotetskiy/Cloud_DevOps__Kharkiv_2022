@@ -347,6 +347,12 @@ server3 | SUCCESS => {
  ```
  <img src="https://github.com/korotetskiy/img/blob/main/a_p1.png">
  
+ Now we verify Ansible playbook
+ 
+ ```
+ ansible-playbook /etc/ansible/example_playbook.yaml --check --diff
+ ```
+ 
  Now we execute this Ansible playbook
  
  ```
