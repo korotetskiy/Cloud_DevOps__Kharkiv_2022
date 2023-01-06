@@ -1,7 +1,7 @@
 Configuration Management. Ansible 
 ===============
 
-1. Installing Ansible on Ubuntu 20.04/22.04</br>
+<h3>1. Installing Ansible on Ubuntu 20.04/22.04</h3>
 Add the following line to /etc/apt/sources.list:
 
 ```  
@@ -34,7 +34,7 @@ Change to the ansible directory and check the contents:
     -rw-r--r--   1 root root 20340 Nov 15 13:58 ansible.cfg
     -rw-r--r--   1 root root   615 Nov 18 12:22 hosts
 
-2.1 Setting up the hosts file for our servers
+<h3>2.1 Setting up the hosts file for our servers</h3>
 
     $ sudo nano hosts
 
@@ -122,7 +122,7 @@ We repeat the command above, but already an abbreviated version:
         "ping": "pong"
     }
 
-2.2 Create an inventory or hosts file
+<h3>2.2 Create an inventory or hosts file</h3>
 
 Combining servers into groups:
 Let's say you have a lot of servers: a database server, an application server, a PROD final project server. Then it can be written to the hosts file in different ways:
@@ -249,7 +249,7 @@ Or as a graph:
       |--@ungrouped:
     ...
 
-2.3 Removing shared variables from the hosts file
+<h3>2.3 Removing shared variables from the hosts file</h3>
 
 Above, we moved the common variables with user data into a separate block. But in practice, it is more professional to transfer such data to a separate file. 
     ...
@@ -282,7 +282,7 @@ Create a group_vars directory and go to it:
     -rw-r--r--   1 root root   670 Nov 14 13:21 hosts
     cd group_vars
 
-2.4 Create a file with server group names test_servers:
+<h3>2.4 Create a file with server group names test_servers:</h3>
 
     nano test_servers
 
@@ -301,7 +301,7 @@ Save changes. In the hosts file, we completely erase these lines:
     ansible_user=vkor
     ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
     
-2.5 Checking Ansible inventory file
+<h3>2.5 Checking Ansible inventory file</h3>
 ```
 $ ansible-inventory --list -y
 Output
@@ -322,7 +322,7 @@ all:
     ungrouped: {}
    
    ````
-2.6 Connectivity testing Ansible hosts
+<h3>2.6 Connectivity testing Ansible hosts</h3>
 
 ```
 $ ansible all -m ping -u root
@@ -342,7 +342,7 @@ server3 | SUCCESS => {
 
 ```
 
- 3 Ansible Playbook creations</br>
+ <h3>3 Ansible Playbook creations</h3>
  Let's, create a playbook:
  
  ```
