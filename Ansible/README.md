@@ -4,21 +4,19 @@ Configuration Management. Ansible
 1. Installing Ansible on Ubuntu 20.04/22.04</br>
 Add the following line to /etc/apt/sources.list:
 
-    > deb http://ppa.launchpad.net/ansible/ansible/ubuntu [version Linux Name] main
-        
-    Then run these commands:
+```  
+deb http://ppa.launchpad.net/ansible/ansible/ubuntu [version Linux Name] main
+```
+Then run these commands:
 
-    > $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-    
-    > $ sudo apt-get update
-    
-    > $ sudo apt install software-properties-common
-    
-    > $ sudo add-apt-repository --yes --update ppa:ansible/ansible
-    
-    > $ sudo apt-get install ansible
-    
-    > $ cd /etc/ansible/
+ ```
+ $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+ $ sudo apt-get update
+ $ sudo apt install software-properties-common
+ $ sudo add-apt-repository --yes --update ppa:ansible/ansible
+ $ sudo apt-get install ansible
+ $ cd /etc/ansible/
+ ```
    
    <img src="https://github.com/korotetskiy/img/blob/main/a_inst.jpg">
 
@@ -38,7 +36,7 @@ Change to the ansible directory and check the contents:
 
 2.1 Setting up the hosts file for our servers
 
-    > sudo nano hosts
+    $ sudo nano hosts
 
 The contents of the hosts file will be something like this:
 
@@ -87,14 +85,22 @@ We enter this data into our hosts file:
     #removed one server and added a link to the SSH key
     test ansible_host=192.168.0.20 ansible_user=vkor ansible_ssh_private_key_file=/home/vkor/.ssh/id_ed25519
 
-Now we try to connect to the server, the first time you connect to the server it will ask for a fingerprint: "Are you sure you want to continue connecting (yes/no)". After confirmation, he does not ask again. But if you are connecting for the first time to 100 servers, then you will have to answer for each. A simple example command:
-    ansible -i hosts all -m ping
-    The authenticity of ...
-    ... Are you sure you want to continue connecting (yes/no)
-    debi | SUCCESS => {
+Now we try to connect to the server, the first time you connect to the server it will ask for a fingerprint: 
+
+> "Are you sure you want to continue connecting (yes/no)". 
+
+A simple example command:
+>    ansible -i hosts all -m ping
+
+The authenticity of ... Are you sure you want to continue connecting (yes/no)
+    
+    
+  ```
+  debi | SUCCESS => {
         "changed": false,
         "ping": "pong"
     }
+```
 
 To cancel the fingerprint check for each server and not prescribe the server file, fill in the ansible.cfg file. Usually these values are already in the template, you just need to uncomment them:
 
