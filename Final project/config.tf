@@ -3,7 +3,7 @@ provider "aws" {
   region     = "us-east-1"
 }
 provider "aws" {
-  region = "eu-central-1"
+  region = "us-east-1"
 }
 
 resource "aws_default_vpc" "default" {} # This need to be added since AWS Provider v4.29+ to get VPC id
