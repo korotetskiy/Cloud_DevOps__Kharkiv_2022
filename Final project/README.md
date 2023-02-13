@@ -1,9 +1,9 @@
 Project explanation 
 ===============
 
-<h3>1. Installing Ansible on Ubuntu 20.04/22.04</h3>
 
-<h3>Console output</h3>
+
+<h3>Console build output</h3>
 
 ```
 Started by GitHub push by korotetskiy
