@@ -1,12 +1,13 @@
-Project explanation 
+CI / CD framework for startup oyster farm  web application  
 ===============
+<h3>The goal - ensure continuous integration and continuous software deployment during the development of a web application.</h3>
 
 <img src="https://github.com/korotetskiy/img/blob/main/fp.jpg"><h3>
 <h3>As development repository will be used: https://github.com/korotetskiy/Case.git </h3>
 
 
 
-  The goal is to ensure continuous integration and continuous software deployment during the development of a web application.
+
  
 <h3>Console build output</h3>
   
@@ -279,5 +280,5 @@ Changes found
 ```
   
 <h3>Conclusions</h3>
-This project implements the infrastructure for continuous integration and continuous software deployment in the process of developing a web application.
+This project implements the infrastructure for continuous integration and continuous software deployment in the process of developing a web application.</br>
 As an improvement to this process, you can implement a continuous integration and continuous deployment infrastructure in AWS Elastic Beanstalk.
