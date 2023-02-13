@@ -3,7 +3,8 @@ Project explanation
 
 <h3>1. Installing Ansible on Ubuntu 20.04/22.04</h3>
 
-Console output
+<h3>Console output</h3>
+
 ```
 Started by GitHub push by korotetskiy
 Running as SYSTEM
@@ -244,7 +245,7 @@ SSH: Transferred 10 file(s)
 Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
 Finished: SUCCESS
 ```
-This page displays the poll log events that triggered this build
+<h3>This page displays the poll log events that triggered this build</h3>
 ```
 Started on Feb 13, 2023, 5:06:36 PM
 Started by event from 140.82.115.51 ⇒ http://109.87.12.12:8080/github-webhook/ on Mon Feb 13 17:06:36 UTC 2023
