@@ -9,6 +9,7 @@ Project explanation
   The goal is to ensure continuous integration and continuous software deployment during the development of a web application.
  
 <h3>Console build output</h3>
+  
 ```
 Started by GitHub push by korotetskiy
 Running as SYSTEM
@@ -249,7 +250,8 @@ SSH: Transferred 10 file(s)
 Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
 Finished: SUCCESS
 ```
-<h3>This page displays the poll log events that triggered this build</h3>
+
+  <h3>This page displays the poll log events that triggered this build</h3>
 
 ```
 Started on Feb 13, 2023, 5:06:36 PM
