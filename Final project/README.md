@@ -1,3 +1,4 @@
+```
 Started by GitHub push by korotetskiy
 Running as SYSTEM
 Building in workspace /var/lib/jenkins/workspace/Build-autoTriger-from-GitHub
@@ -235,4 +236,5 @@ SSH: EXEC: completed after 202 ms
 SSH: Disconnecting configuration [Web-Production] ...
 SSH: Transferred 10 file(s)
 Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
-Finished: SUCCESS``
+Finished: SUCCESS
+```
