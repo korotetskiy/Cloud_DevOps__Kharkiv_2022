@@ -1,4 +1,4 @@
-Configuration Management. Ansible 
+Project explanation 
 ===============
 
 <h3>1. Installing Ansible on Ubuntu 20.04/22.04</h3>
