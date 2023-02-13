@@ -1,6 +1,8 @@
 CI / CD framework for startup oyster farm  web application  
 ===============
 <h3>The goal - ensure continuous integration and continuous software deployment during the development of a web application.</h3>
+<h3>Motivation - it is very important for a startup to save money on the development process.</h3>
+<h3>Relevance - the quality code pipeline performs an integration function, including various types of automated tests at each stage, with the subsequent delivery and deployment of the completed code into a finished product for the end user.</h3>
 
 <img src="https://github.com/korotetskiy/img/blob/main/fp.jpg"><h3>
 <h3>As development repository will be used: https://github.com/korotetskiy/Case.git </h3>
