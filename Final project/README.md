@@ -282,5 +282,6 @@ Changes found
 ```
   
 <h3>Conclusions</h3>
-This project implements the infrastructure for continuous integration and continuous software deployment in the process of developing a web application.</br>
+This project implements the infrastructure for continuous integration and continuous software deployment in the process of developing a web application.
+ http://81.17.140.44/</br>
 As an improvement to this process, you can implement a continuous integration and continuous deployment infrastructure in AWS Elastic Beanstalk.
