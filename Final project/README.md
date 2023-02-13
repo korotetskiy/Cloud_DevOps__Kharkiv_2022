@@ -244,3 +244,28 @@ SSH: Transferred 10 file(s)
 Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
 Finished: SUCCESS
 ```
+This page displays the poll log events that triggered this build
+```
+Started on Feb 13, 2023, 5:06:36 PM
+Started by event from 140.82.115.51 ⇒ http://109.87.12.12:8080/github-webhook/ on Mon Feb 13 17:06:36 UTC 2023
+Polling SCM changes on built-in
+Using strategy: Default
+[poll] Last Built Revision: Revision 94482ed3af6f3b64fe348c5142f702aeb7593c4e (origin/main)
+The recommended git tool is: NONE
+using credential ba8263f2-4fd8-45ab-a164-64d0a59e4d5e
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Build-autoTriger-from-GitHub/.git # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/korotetskiy/Case.git # timeout=10
+Fetching upstream changes from https://github.com/korotetskiy/Case.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/korotetskiy/Case.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Polling for changes in
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+ > git log --full-history --no-abbrev --format=raw -M -m 94482ed3af6f3b64fe348c5142f702aeb7593c4e..344a392df62473be24f94b67c2ca59444681956a # timeout=10
+Done. Took 0.64 sec
+Changes found
+```
