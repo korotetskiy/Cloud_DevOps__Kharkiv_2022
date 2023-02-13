@@ -1,8 +1,8 @@
 Project explanation 
 ===============
-<h3>Project algorithm</h3>
-<img src="https://github.com/korotetskiy/img/blob/main/fp.jpg"><h3>
 
+<img src="https://github.com/korotetskiy/img/blob/main/fp.jpg"><h3>
+<h3>As development repository will be used: https://github.com/korotetskiy/Case.git </h3>
 
 <h3>Console build output</h3>
 
