@@ -3,7 +3,7 @@ CI / CD framework for startup oyster farm  web application
 <h3>The goal - ensure continuous integration and continuous software deployment during the development of a web application.</h3>
 <h3>Motivation - it is very important for a startup to save money on the development process.</h3>
 <h3>Relevance - the quality code pipeline performs an integration function, including various types of automated tests at each stage, with the subsequent delivery and deployment of the completed code into a finished product for the end user.</h3>
-
+<h3>For simplicity, reliability and minimum financial costs, we will use GitHub +Jenkins +Terraform to create a CI / CD framework.</h3>
 <img src="https://github.com/korotetskiy/img/blob/main/fp.jpg"><h3>
 <h3>As development repository will be used: https://github.com/korotetskiy/Case.git </h3>
 
@@ -283,5 +283,4 @@ Changes found
   
 <h3>Conclusions</h3>
 This project implements the infrastructure for continuous integration and continuous software deployment in the process of developing a web application (http://81.17.140.44).</br>
-[Cloud&DevOps Fundamentals Autumn 2022](https://github.com/korotetskiy/Cloud_DevOps__Kharkiv_2022) 
 As an improvement to this process, you can implement a continuous integration and continuous deployment infrastructure in AWS Elastic Beanstalk.
