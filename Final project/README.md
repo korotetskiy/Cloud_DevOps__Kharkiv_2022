@@ -1,6 +1,7 @@
 Project explanation 
 ===============
-
+Project algorithm
+<img src="https://github.com/korotetskiy/img/blob/main/d1.png"><h3>
 
 
 <h3>Console build output</h3>
