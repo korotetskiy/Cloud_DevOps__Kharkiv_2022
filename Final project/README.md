@@ -246,7 +246,6 @@ SSH: Transferred 10 file(s)
 Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
 Finished: SUCCESS
 ```
-
 <h3>This page displays the poll log events that triggered this build</h3>
 
 ```
