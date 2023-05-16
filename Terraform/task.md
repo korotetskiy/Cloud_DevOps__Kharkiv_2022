@@ -201,7 +201,7 @@ output "grafana_url" {
 }
 ```
 
-To adding Ansible playbooks for configuration management, need create a separate directory named `ansible` and place playbooks inside it. </br>
+3) To adding Ansible playbooks for configuration management, need create a separate directory named `ansible` and place playbooks inside it. </br>
 Lets create an Ansible playbook named `grafana.yml` with the following contents:
 
 ```yaml
@@ -292,4 +292,56 @@ terraform init
 terraform apply
 ```
 Important: before running Terraform commands, you must set up the required AWS credentials with the appropriate rights.
+
+4) Adding custom _Grafana_ dashboards to observe specific metrics to observe specific metrics in a Terraform module:
+
+```hcl
+resource "grafana_dashboard" "CPU" {
+  dashboard_json = <<EOF
+{
+  "editable": true,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Custom Metric",
+      "type": "graph",
+      "datasource": "${grafana_datasource.example.id}",
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "my_custom_metric{instance=\"${var.instance_id}\", region=\"${var.region}\"}"
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      }
+    }
+  ]
+}
+EOF
+}
+
+resource "grafana_datasource" "CPU" {
+  name            = "Prometheus"
+  type            = "prometheus"
+  url             = "http://prometheus.example.com"
+  access_mode     = "proxy"
+  basic_auth      = "true"
+  basic_auth_user = "admin"
+  basic_auth_password = "password"
+}
+
+```
+
+We're use the `grafana_dashboard` resource to create a custom Grafana dashboard. The `dashboard_json` argument contains the JSON representation of the dashboard configuration.</br>
+In this case, we have a single panel of type "graph" that visualizes a custom metric.
+
+The `grafana_datasource` resource is used to configure the Prometheus data source for the dashboard.
+
+Important: Need have the necessary provider and data source blocks defined in your Terraform configuration to connect to Grafana and Prometheus.
+
+
 
