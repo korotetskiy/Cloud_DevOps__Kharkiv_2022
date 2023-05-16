@@ -19,7 +19,7 @@
 - Make use of _Ansible_ playbooks for configuration management;
 - Add custom _Grafana_ dashboards to observe specific metrics.
 
-Implementation: </br>
+##Implementation: </br>
 Below is a Terraform module that provisions an AWS EC2 instance, attaches a static IP, installs and configures Docker, and runs a Grafana container accessible via a web browser.
 
 To get started, lets create a new directory for new Terraform project and initialize it:
