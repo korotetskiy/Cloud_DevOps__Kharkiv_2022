@@ -168,36 +168,61 @@ output "public_ip" {
 
 `variables.tf`:
 ```hcl
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "us-east-1"
+variable "aws_access_key" {
+  description = "AWS access key"
 }
 
-variable "ami_id" {
+variable "aws_secret_access_key" {
+  description = "AWS secret access key"
+}
+
+variable "aws_region" {
+  description = "AWS region"
+  default     = "us-west-2"
+}
+
+variable "ami" {
   description = "AMI ID"
-  type        = string
-  default     = "ami-0c94855ba95c71c99" # Ubuntu 20.04 LTS
+  default     = "ami-12345678"
 }
 
 variable "instance_type" {
-  description = "Instance type"
-  type        = string
+  description = "EC2 instance type"
   default     = "t2.micro"
 }
 
 variable "key_name" {
   description = "SSH key pair name"
-  type        = string
-  default     = "example-keypair"
 }
+
+variable "security_group_id" {
+  description = "Security group ID"
+}
+
+variable "instance_name" {
+  description = "Name of the EC2 instance"
+  default     = "grafana-instance"
+}
+
+variable "elastic_ip_name" {
+  description = "Name of the Elastic IP"
+  default     = "grafana-elastic-ip"
+}
+
 ```
 
 `outputs.tf`:
 ```hcl
-output "grafana_url" {
-  value = "http://${aws_eip.example_eip.public_ip}:3000/dashboards"
-  value = "http://${aws_eip.grafana_ip.public_ip}:3000/dashboards"
+output "instance_id" {
+  description = "ID of the created EC2 instance"
+  value       = aws_instance.grafana_instance.id
+}
+
+output "public_ip" {
+  description = "Public IP of the created EC2 instance"
+  value       = aws_instance.grafana_instance.public_ip
+}
+
 }
 ```
 
