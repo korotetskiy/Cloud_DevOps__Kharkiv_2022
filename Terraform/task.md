@@ -160,7 +160,7 @@ output "instance_id" {
 }
 
 output "public_ip" {
-  value = aws_eip.example_eip.public_ip
+  value = aws_eip.grafana_ip.public_ip
 }
 
 
@@ -197,25 +197,10 @@ variable "key_name" {
 ```hcl
 output "grafana_url" {
   value = "http://${aws_eip.example_eip.public_ip}:3000/dashboards"
+  value = "http://${aws_eip.grafana_ip.public_ip}:3000/dashboards"
 }
 ```
 
-`userdata.sh` (located in the `scripts/` directory):
-```bash
-#!/bin/bash
-
-# Install Docker
-apt-get update
-apt-get install -y docker.io
-
-# Add current user to the docker group
-usermod -aG docker $USER
-
-# Start Grafana container
-docker run -d -p 3000:3000 --name grafana grafana/grafana
-```
-
-This module sets up an AWS EC2 instance, attaches a static IP to it.</br>
 To adding Ansible playbooks for configuration management, need create a separate directory named `ansible` and place playbooks inside it. </br>
 Lets create an Ansible playbook named `grafana.yml` with the following contents:
 
@@ -279,6 +264,7 @@ Lets create an Ansible playbook named `grafana.yml` with the following contents:
         restart_policy: always
         ports:
           - "3000:3000"
+          
 ```
 
 With the above structure, we can create a GitHub repository and push the Terraform module, variables, and Ansible playbooks. 
@@ -299,132 +285,11 @@ module "aws_instance" {
 }
 ```
 
-After configuring the module, need run `terraform init` to initialize the working directory and `terraform apply` to provision the infrastructure. 
-The output of `terraform apply` will include the public IP address of the instance.
-
-Important: before running Terraform commands, you must set up the required AWS credentials with the appropriate rights.
-
-
- a Terraform module that provisions an AWS EC2 instance, sets up SSH key pair, attaches a static IP address, installs Docker, and runs a Grafana container. It also utilizes variables and outputs for flexibility and convenience.
-
-
-Next, create a file named `main.tf` with the following content:
-
-```hcl
-provider "aws" {
-  region = var.aws_region
-}
-
-resource "aws_key_pair" "ssh_key" {
-  key_name   = var.ssh_key_name
-  public_key = var.ssh_public_key
-}
-
-resource "aws_instance" "grafana_instance" {
-  ami           = var.instance_ami
-  instance_type = var.instance_type
-  key_name      = aws_key_pair.ssh_key.key_name
-
-  tags = {
-    Name = "grafana-instance"
-  }
-}
-
-resource "aws_eip" "grafana_ip" {
-  instance = aws_instance.grafana_instance.id
-}
-
-resource "null_resource" "configure_instance" {
-  depends_on = [aws_eip.grafana_ip]
-
-  provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common",
-      "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -",
-      "sudo add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\"",
-      "sudo apt-get update",
-      "sudo apt-get install -y docker-ce",
-      "sudo usermod -aG docker ubuntu"
-    ]
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "sudo docker run -d -p 3000:3000 --name=grafana grafana/grafana"
-    ]
-  }
-
-  connection {
-    type        = "ssh"
-    host        = aws_eip.grafana_ip.public_ip
-    user        = "ubuntu"
-    private_key = file(var.ssh_private_key_path)
-  }
-}
-
-output "grafana_ip_address" {
-  value = aws_eip.grafana_ip.public_ip
-}
-```
-
-Next, create a file named `variables.tf` with the following content:
-
-```hcl
-variable "aws_region" {
-  description = "AWS region where the instance will be provisioned."
-  default     = "us-east-1"
-}
-
-variable "instance_ami" {
-  description = "AMI ID of the instance."
-  default     = "ami-0123456789abcdef0"
-}
-
-variable "instance_type" {
-  description = "Type of the instance."
-  default     = "t2.micro"
-}
-
-variable "ssh_key_name" {
-  description = "Name of the SSH key pair."
-  default     = "grafana-key"
-}
-
-variable "ssh_public_key" {
-  description = "SSH public key contents."
-  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC..."
-}
-
-variable "ssh_private_key_path" {
-  description = "Path to the SSH private key file."
-  default     = "~/.ssh/grafana-key.pem"
-}
-```
-
-Now, let's create a file named `outputs.tf` with the following content:
-
-```hcl
-output "grafana_dashboard_url" {
-  value = "http://${aws_eip.grafana_ip.public_ip}:3000/dashboards"
-}
-``
-
-`
-
-You can customize the variables in the `variables.tf` file according to your preferences. Ensure that you update the `instance_ami` variable with the appropriate AMI ID for your desired region.
-
-Finally, initialize and apply the Terraform configuration:
+After configuring the module, ninitialize and apply the Terraform configuration:
 
 ```bash
 terraform init
 terraform apply
 ```
+Important: before running Terraform commands, you must set up the required AWS credentials with the appropriate rights.
 
-After Terraform provisions the resources, it will output the Grafana IP address and the dashboard URL. You can access the Grafana web interface using the provided URL.
-
-Regarding the optional Ansible integration and custom Grafana dashboards, you can further extend the Terraform configuration and provision the required resources using additional modules and playbooks.
-
-Remember to create a repository on GitHub or any other version control platform and push your Terraform code, including the variable files and outputs. Provide instructions in a README file on how to use and execute the Terraform module.
-
-Note: Ensure that you have the necessary AWS credentials set up on your machine, either through environment variables or a shared credentials file, to authenticate with AWS.
