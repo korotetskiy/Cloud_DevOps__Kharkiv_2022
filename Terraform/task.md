@@ -32,7 +32,7 @@ cd terraform-aws-grafana
 1) Сreating a Terraform module directory structure:
 
 ```
-terraform-module/
+terraform-aws-grafana/
   ├── main.tf
   ├── variables.tf
   ├── outputs.tf
