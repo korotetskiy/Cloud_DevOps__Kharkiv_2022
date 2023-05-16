@@ -362,7 +362,7 @@ In this case, we have a single panel of type "graph" that visualizes a custom me
 
 The `grafana_datasource` resource is used to configure the Prometheus data source for the dashboard.
 
-Important: Need have the necessary provider and data source blocks defined in your Terraform configuration to connect to Grafana and Prometheus.
+Important: Need have the necessary provider and data source blocks defined in Terraform configuration to connect to Grafana and Prometheus.
 
 
 
