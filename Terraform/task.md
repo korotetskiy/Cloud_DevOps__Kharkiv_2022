@@ -219,7 +219,6 @@ output "public_ip" {
   value       = aws_instance.grafana_instance.public_ip
 }
 
-}
 ```
 
 3) To adding Ansible playbooks for configuration management, need create a separate directory named `ansible` and place playbooks inside it. </br>
