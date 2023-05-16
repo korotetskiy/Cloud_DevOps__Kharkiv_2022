@@ -83,6 +83,8 @@ resource "aws_instance" "example_instance" {
   }
 }
 
+
+
 # Create an elastic IP
 resource "aws_eip" "example_eip" {
   instance = aws_instance.example_instance.id
@@ -155,3 +157,89 @@ docker run -d -p 3000:3000 --name grafana grafana/grafana
 ```
 
 This module sets up an AWS EC2 instance, attaches a static IP to it,
+To adding Ansible playbooks for configuration management, need create a separate directory named `ansible` and place playbooks inside it. Lets create an Ansible playbook named `grafana.yml` with the following contents:
+
+```yaml
+# ansible/grafana.yml
+
+- name: Install Docker
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install Docker dependencies
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
+        state: present
+
+    - name: Add Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker APT repository
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
+        state: present
+
+    - name: Update APT cache
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker-ce
+        state: present
+
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+
+- name: Run Grafana container
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Pull Grafana Docker image
+      docker_image:
+        name: grafana/grafana:latest
+        source: pull
+
+    - name: Create Grafana container
+      docker_container:
+        name: grafana
+        image: grafana/grafana:latest
+        state: started
+        restart_policy: always
+        ports:
+          - "3000:3000"
+```
+
+With the above structure, we can create a GitHub repository and push the Terraform module, variables, and Ansible playbooks. 
+
+To use the module, need create a separate Terraform configuration file (e.g., `main.tf`) where specify the module and configure any necessary inputs:
+
+```hcl
+# main.tf
+
+module "aws_instance" {
+  source = "github.com/<username>/<repository>"
+
+  aws_region      = "us-east-1"
+  ami_id          = "ami-12345678"
+  instance_type   = "t2.micro"
+  key_name        = "example-key"
+  ssh_public_key  = "ssh-rsa ABCDEFG..."
+}
+```
+
+After configuring the module, you can run `terraform init` to initialize the working directory and `terraform apply` to provision the infrastructure. 
+The output of `terraform apply` will include the public IP address of the instance.
+
+Important: efore running Terraform commands, you must set up the required AWS credentials with the appropriate rights
