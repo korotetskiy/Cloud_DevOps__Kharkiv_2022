@@ -22,7 +22,7 @@
 Implementation: 
 Below is a Terraform module that provisions an AWS EC2 instance, attaches a static IP, installs and configures Docker, and runs a Grafana container accessible via a web browser.
 
-1) Сreatштп a Terraform module directory structure:
+1) Сreating a Terraform module directory structure:
 
 ```
 terraform-module/
@@ -33,7 +33,7 @@ terraform-module/
         └── userdata.sh
 ```
 
-2) Сreatштп the module files.
+2) Сreating the module files.
 
 `main.tf`:
 
