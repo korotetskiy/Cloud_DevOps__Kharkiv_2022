@@ -309,6 +309,8 @@ After configuring the module, ninitialize and apply the Terraform configuration:
 
 ```bash
 terraform init
+terraform validate
+terraform plan
 terraform apply
 ```
 Important: before running Terraform commands, you must set up the required AWS credentials with the appropriate rights.
