@@ -300,7 +300,7 @@ module "aws_instance" {
 }
 ```
 
-After configuring the module, ninitialize and apply the Terraform configuration:
+After configuring the module, ininitialize and apply the Terraform configuration:
 
 ```bash
 terraform init
