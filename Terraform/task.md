@@ -200,11 +200,6 @@ variable "instance_name" {
   default     = "grafana-instance"
 }
 
-variable "elastic_ip_name" {
-  description = "Name of the Elastic IP"
-  default     = "grafana-elastic-ip"
-}
-
 ```
 
 `outputs.tf`:
